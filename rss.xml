@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Ali's private list</title>
+    <googleplay:owner>alivardasbi@gmail.com</googleplay:owner>
+    <googleplay:author>Ali</googleplay:author>
+    <description>A private list for my listenings.</description>
+    <language>en-us</language>
+    <link>https://github.com/AliVard/AliVard.github.io</link>
+    <item>
+      <title>dar sepehr'e sepehri-01</title>
+      <description>sepehri</description>
+      <pubDate>Tue, 14 Jan 2021 12:00:00 GMT</pubDate>
+      <enclosure url="https://drive.google.com/file/d/1jUqVVa4MbhcEnwPAkF3c6ylxrzDDWF7x/view?usp=sharing"
+                 type="audio/mpeg" length="34216300"/>
+      <itunes:duration>1:30:00</itunes:duration>
+      <guid isPermaLink="false">dzpodtop10</guid>
+    </item>
+  </channel>
+</rss>
