@@ -1,6 +1,6 @@
 # Ali Vardasbi
 
-I'm a PhD student at the [University of Amsterdam, IRLab](https://irlab.science.uva.nl/) working on different aspects of search and recommendation.
+I'm a PhD student at the [University of Amsterdam, IRLab](https://irlab.science.uva.nl/), working on different aspects of search and recommendation.
 My supervisor is [Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/).
 Additional to search and recommendation, I am also interested in understanding generalization in the overparameterized neural networks.
 
