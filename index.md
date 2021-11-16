@@ -7,8 +7,7 @@ Additional to search and recommendation, I am also interested in understanding g
 I have joined UvA from May 2019.
 Before that, I was a researcher at the University of Tehran, working on NLP, IR and social networks.
 
-## Recent publications
-- **Ali Vardasbi**, and Maarten de Rijke, Early Stopping in Learning to Rank without Validation Set in Low Data Regimes. Submitted to TehWebConf 2022. Not finalized.    
+## Recent publications  
 - **Ali Vardasbi**, Maarten de Rijke, and Ilya Markov. [Mixture-Based Correction for Position and Trust Bias in Counterfactual Learning to Rank.](https://arxiv.org/pdf/2108.08538.pdf) In CIKM 2021. November 2021.    
 - Hamed Bonab, Mohammad Aliannejadi, **Ali Vardasbi**, Evangelos Kanoulas, James Allan. [Cross-Market Product Recommendation.](https://arxiv.org/pdf/2109.05929.pdf) In CIKM 2021. November 2021.
 - **Ali Vardasbi**, Harrie Oosterhuis, and Maarten de Rijke. [When Inverse Propensity Scoring does not Work: Affine Corrections for Unbiased Learning to Rank.](https://staff.fnwi.uva.nl/m.derijke/wp-content/papercite-data/pdf/vardasbi-2020-inverse.pdf) In CIKM 2020. ACM, October 2020.
