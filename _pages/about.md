@@ -21,7 +21,7 @@ Recently, I have worked on generative Large Language Models (LLMs) and retrieval
 [Re-Examining Assumptions in Fair and Unbiased Learning to Rank.](files/AliVardasbi-Thesis.pdf) Amsterdam, December 2023.
 
 ## Notes
-[Here](readings.md) I keep some highlights from the papers I read.
+[Here](readings) I keep some highlights from the papers I read.
 
 ## Publications  
 ### Conferences
