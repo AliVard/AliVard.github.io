@@ -3,7 +3,9 @@
 I joined the [University of Amsterdam, IRLab](https://irlab.science.uva.nl/) as a Ph.D. on May 2019, under the supervision of [Prof. Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/) and [Dr. Mostafa Dehghani](https://mostafadehghani.com/).
 Our work on fair and unbiased learning to rank (LTR) from user interactions has led to several papers in SIGIR and CIKM.
 We also explored overparameterization and memorization/generalization in general machine learning.
+
 Last year, I interned in the machine translation team at Apple and extended my experience in sequence modeling, particularly transformers and state space models.
+
 Recently, I have worked on generative Large Language Models (LLMs) and retrieval augmentation techniques in music recommendation as an intern at Spotify.
 
 ## Thesis
