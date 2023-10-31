@@ -29,5 +29,5 @@ Recently, I have worked on generative Large Language Models (LLMs) and retrieval
 - **Ali Vardasbi**, Heshaam Faili, Masoud Asadpour. [Eigenvalue Based Features for Semantic Sentence Similarity.](https://ieeexplore.ieee.org/abstract/document/8324078) In Artificial Intelligence and Signal Processing Conference (AISP). IEEE, October 2017.
 
 ### Journals
-<!-- - **Ali Vardasbi**, Heshaam Faili, Masoud Asadpour. [Solving Submodular Text Processing Problems Using Influence Graphs.](https://link.springer.com/article/10.1007/s13278-019-0559-9) Social Network Analysis and Mining, 2019. -->
+- **Ali Vardasbi**, Heshaam Faili, Masoud Asadpour. [Solving Submodular Text Processing Problems Using Influence Graphs.](https://link.springer.com/article/10.1007/s13278-019-0559-9) Social Network Analysis and Mining, 2019.
 - **Ali Vardasbi**, Heshaam Faili, Masoud Asadpour. [SWIM: Stepped Weighted Shell Decomposition Influence Maximization for Large-Scale Networks](https://dl.acm.org/doi/abs/10.1145/3072652) ACM Transactions on Information Systems (TOIS), 2017.
