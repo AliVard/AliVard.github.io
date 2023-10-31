@@ -1,17 +1,21 @@
 # Ali Vardasbi
 
+I joined the [University of Amsterdam, IRLab](https://irlab.science.uva.nl/) as a Ph.D. on May 2019, under the supervision of [Prof. Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/) and [Dr. Mostafa Dehghani](https://mostafadehghani.com/).
+Our work on fair and unbiased learning to rank (LTR) from user interactions has led to several papers in SIGIR and CIKM.
+We also explored overparameterization and memorization/generalization in general machine learning.
+Last year, I interned in the machine translation team at Apple and extended my experience in sequence modeling, particularly transformers and state space models.
+Recently, I have worked on generative Large Language Models (LLMs) and retrieval augmentation techniques in music recommendation as an intern at Spotify.
 
-I'm a PhD student at the [University of Amsterdam, IRLab](https://irlab.science.uva.nl/), working on different aspects of search and recommendation.
-My supervisors are [Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/) and [Mostafa Dehghani](https://mostafadehghani.com/).
-My PhD thesis is about unbiased learning to rank from user interactions.
-Particularly, we are working on bias and fairness for search and recommendation.
-We are also doing research about the generalization of overparameterized neural networks.
+## [My Ph.D. thesis](files/AliVardasbi-Thesis.pdf)
 
-Recently, I interned in the machine translation team at Apple and extended my experience on sequence modeling, particularly transformers and state space models.
-There, we explored the strengths and shortcomings of the newly proposed S4 architecture (structured state space model) on the machine translation task.
+## [Some highlights from the papers I read.](readings.md)
 
 ## Publications  
 ### Conferences
+- **Ali Vardasbi**, Maarten de Rijke, Fernando Diaz, and Mostafa Dehghani. [Group Membership bias.](https://arxiv.org/pdf/2308.02887.pdf) arxiv 2023. 
+- Fatemeh Sarvi, **Ali Vardasbi**, Mohammad Aliannejadi, Sebastian Schelter, and Maarten de Rijke. [On the Impact of Outlier Bias on User Clicks.](https://arxiv.org/pdf/2305.00857.pdf) SIGIR 2023. 
+- Ming Li, **Ali Vardasbi**, Andrew Yates, and Maarten de Rijke. [Repetition and Exploration in Sequential Recommendation: A Reproducibility Study.](https://staff.fnwi.uva.nl/m.derijke/wp-content/papercite-data/pdf/li-2023-repetition.pdf) SIGIR 2023. 
+- **Ali Vardasbi**, Telmo Pessoa Pires, Robin M.~Schmidt, and Stephan Peitz. [State Spaces Aren't Enough: Machine Translation Needs Attention.](https://arxiv.org/pdf/2304.12776.pdf) EAMT 2023.
 - **Ali Vardasbi**, Mostafa Dehghani, and Maarten de Rijke, [Intersection of Parallels as an Early Stopping Criterion.](https://arxiv.org/pdf/2208.09529.pdf) In CIKM 2022. October 2022. [Codes](https://github.com/AliVard/CDC-Early-Stopping)
 - **Ali Vardasbi**, Fatemeh Sarvi, and Maarten de Rijke, [Probabilistic Permutation Graph Search: Black-Box Optimization for Fairness in Ranking](https://arxiv.org/pdf/2204.13765.pdf) In SIGIR 2022. July 2022. [Codes](https://github.com/AliVard/PPG)
 - **Ali Vardasbi**, Maarten de Rijke, and Ilya Markov. [Mixture-Based Correction for Position and Trust Bias in Counterfactual Learning to Rank.](https://arxiv.org/pdf/2108.08538.pdf) In CIKM 2021. November 2021. [Codes](https://github.com/AliVard/MBC)
