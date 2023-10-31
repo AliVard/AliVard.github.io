@@ -1,4 +1,13 @@
-# Ali Vardasbi
+---
+permalink: /
+title: "Ali Vardasbi"
+excerpt: "About me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
 
 I joined the [University of Amsterdam, IRLab](https://irlab.science.uva.nl/) as a Ph.D. on May 2019, under the supervision of [Prof. Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/) and [Dr. Mostafa Dehghani](https://mostafadehghani.com/).
 Our work on fair and unbiased learning to rank (LTR) from user interactions has led to several papers in SIGIR and CIKM.
