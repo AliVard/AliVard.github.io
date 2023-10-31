@@ -1,0 +1,124 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+
+    <h2 class="archive__item-title" itemprop="headline">
+      {% if post.link %}
+        <a href="{{ post.link }}" class="archive__item-title-link">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% else %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink" class="archive__item-title-link">{{ title }}</a>
+      {% endif %}
+    </h2>
+    
+    {% if post.read_time %}
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+
+        {% if post.collection == 'teaching' %}
+          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif post.collection == 'publications' %}
+          <p>
+            {% if post.authors %}
+              <b>{{ post.authors }}</b>.
+            {% endif %}
+            Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.
+          {%- if post.paperurl or post.codeurl or post.youtube or post.othervideo or post.slides or post.tutorialwebsite or post.externalvideo or post.poster  %}
+          [
+          {%- endif -%}
+          {%- if post.paperurl -%}
+              <a href="{{ post.paperurl }}" rel="permalink">pdf</a>
+          {%- endif -%}
+          {%- if post.codeurl -%}
+              {%- if post.paperurl -%}
+              ,
+              {% endif -%}
+              <a href="{{ post.codeurl }}" rel="permalink">code</a>
+          {%- endif -%}
+          {%- if post.youtube -%}
+              {%- if post.paperurl or post.codeurl -%}
+              ,
+              {% endif %}
+              <a href="https://www.youtube.com/watch?v={{ post.youtube }}" rel="permalink">video</a>
+          {%- endif -%}
+          {%- if post.othervideo -%}
+              {%- if post.paperurl or post.codeurl or post.youtube -%}
+              ,
+              {% endif %}
+              <a href="{{ post.othervideo }}" rel="permalink">video</a>
+          {%- endif -%}
+          {%- if post.externalvideo -%}
+              {%- if post.paperurl or post.codeurl or post.youtube or post.othervideo -%}
+              ,
+              {% endif %}
+              <a href="{{ post.externalvideo }}" rel="permalink">external video</a>
+          {%- endif -%}
+          {%- if post.slides -%}
+              {%- if post.paperurl or post.codeurl or post.youtube or post.othervideo or post.externalvideo -%}
+              ,
+              {% endif %}
+              <a href="{{ post.slides }}" rel="permalink">slides</a>
+          {%- endif -%}
+          {%- if post.poster -%}
+              {%- if post.paperurl or post.codeurl or post.youtube or post.othervideo or post.slides or post.externalvideo -%}
+              ,
+              {% endif %}
+              <a href="{{ post.poster }}" rel="permalink">poster</a>
+          {%- endif -%}
+          {%- if post.tutorialwebsite -%}
+              {%- if post.paperurl or post.codeurl or post.youtube or post.othervideo or post.slides or post.externalvideo or post.poster -%}
+              ,
+              {% endif %}
+              <a href="{{ post.tutorialwebsite }}" rel="permalink">website</a>
+          {%- endif -%}
+          {%- if post.paperurl or post.codeurl or post.youtube or post.othervideo or post.slides or post.tutorialwebsite or post.externalvideo or post.poster -%}
+          ]
+          {%- endif -%}
+          </p>
+        {% elsif post.date %}
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>.</p>
+        {% endif %}
+
+    {% if post.award %}
+    <p><img src="http://harrieo.github.io/images/award-icon.png" alt="Award Icon" width="23"/> This paper won the <i>{{ post.award }}</i>.</p>
+    {% endif %}
+
+    {% if post.excerpt and site.read_more != 'enabled' %}
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    {% elsif post.excerpt and site.read_more == 'enabled' %}
+    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+    {% endif %}
+    
+    <!-- {% if post.citation and post.paperurl %}
+      <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
+    {% elsif post.citation %}
+      <p>Recommended citation: {{ post.citation }} </p>
+    {% elsif post.paperurl %}
+      <p>Download <a href=" {{ post.paperurl }} "><u>here</u></a></p>
+    {% endif %} -->
+
+  </article>
+</div>
