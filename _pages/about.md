@@ -36,7 +36,7 @@ Recently, I have worked on generative Large Language Models (LLMs) and retrieval
 - **Ali Vardasbi**, Harrie Oosterhuis, and Maarten de Rijke. [When Inverse Propensity Scoring does not Work: Affine Corrections for Unbiased Learning to Rank.](https://staff.fnwi.uva.nl/m.derijke/wp-content/papercite-data/pdf/vardasbi-2020-inverse.pdf) In CIKM 2020. ACM, October 2020. [Codes](https://github.com/AliVard/trust-bias-CIKM2020)
 - **Ali Vardasbi**, Maarten de Rijke, and Ilya Markov. [Cascade Model-based Propensity Estimation for Counterfactual Learning to Rank.](https://staff.fnwi.uva.nl/m.derijke/wp-content/papercite-data/pdf/vardasbi-2020-cascade.pdf) In SIGIR 2020. ACM, July 2020. [Codes](https://github.com/AliVard/CM-IPS-SIGIR20)
 - **Ali Vardasbi**, Heshaam Faili, Masoud Asadpour. [Eigenvalue Based Features for Semantic Sentence Similarity.](https://ieeexplore.ieee.org/abstract/document/8324078) In Artificial Intelligence and Signal Processing Conference (AISP). IEEE, October 2017.
-<!-- 
+
 ### Journals
 - **Ali Vardasbi**, Heshaam Faili, Masoud Asadpour. [Solving Submodular Text Processing Problems Using Influence Graphs.](https://link.springer.com/article/10.1007/s13278-019-0559-9) Social Network Analysis and Mining, 2019.
-- **Ali Vardasbi**, Heshaam Faili, Masoud Asadpour. [SWIM: Stepped Weighted Shell Decomposition Influence Maximization for Large-Scale Networks](https://dl.acm.org/doi/abs/10.1145/3072652) ACM Transactions on Information Systems (TOIS), 2017. -->
+- **Ali Vardasbi**, Heshaam Faili, Masoud Asadpour. [SWIM: Stepped Weighted Shell Decomposition Influence Maximization for Large-Scale Networks](https://dl.acm.org/doi/abs/10.1145/3072652) ACM Transactions on Information Systems (TOIS), 2017.

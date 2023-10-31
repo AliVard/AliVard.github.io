@@ -83,7 +83,7 @@ analytics:
 
 author:
   name             : "Ali Vardasbi"
-  avatar           : "files/Ali.jpg"
+  avatar           : "Ali.jpg"
   bio              : ""
   location         : "Amsterdam, The Netherlands"
   employer         :
@@ -153,20 +153,6 @@ kramdown:
   enable_coderay: false
 
 
-# Collections
-collections:
-  # teaching:
-  #   output: true
-  #   permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  # portfolio:
-  #   output: true
-  #   permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
 
 
 # Defaults
