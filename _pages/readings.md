@@ -7,3 +7,5 @@ redirect_from:
   - /readings/
   - /readings.html
 ---
+
+TBD
