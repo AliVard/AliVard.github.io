@@ -14,7 +14,7 @@ talkmap_link             : false #change to true to add link to talkmap on talks
 author:
   name             : "Ali Vardasbi"
   avatar           : "files/Ali.jpg"
-  # bio              : ""
+  bio              : ""
   location         : "Amsterdam, The Netherlands"
   employer         :
   pubmed           : 
