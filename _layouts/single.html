@@ -1,0 +1,258 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+          {% if page.read_time %}
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+          {% endif %}
+        {% if page.modified %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+        {% endif %}
+
+        {% if page.collection == 'teaching' %}
+          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }}. </p>
+        {% elsif page.venue and page.date %}
+          <p>
+          {% if page.authors %}
+          <b>{{ page.authors | markdownify | remove: "<p>" | remove: "</p>" }}</b></br>
+          {% endif %}
+          Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }}.
+         {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo or page.slides or page.tutorialwebsite or page.externalvideo or page.poster  %}
+          [
+          {%- endif -%}
+          {%- if page.paperurl -%}
+              <a href="{{ page.paperurl }}" rel="permalink">pdf</a>
+          {%- endif -%}
+          {%- if page.codeurl -%}
+              {%- if page.paperurl -%}
+              ,
+              {% endif -%}
+              <a href="{{ page.codeurl }}" rel="permalink">code</a>
+          {%- endif -%}
+          {%- if page.youtube -%}
+              {%- if page.paperurl or page.codeurl -%}
+              ,
+              {% endif %}
+              <a href="https://www.youtube.com/watch?v={{ page.youtube }}" rel="permalink">video</a>
+          {%- endif -%}
+          {%- if page.othervideo -%}
+              {%- if page.paperurl or page.codeurl or page.youtube -%}
+              ,
+              {% endif %}
+              <a href="{{ page.othervideo }}" rel="permalink">video</a>
+          {%- endif -%}
+          {%- if page.externalvideo -%}
+              {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo -%}
+              ,
+              {% endif %}
+              <a href="{{ page.externalvideo }}" rel="permalink">external video</a>
+          {%- endif -%}
+          {%- if page.slides -%}
+              {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo or page.externalvideo -%}
+              ,
+              {% endif %}
+              <a href="{{ page.slides }}" rel="permalink">slides</a>
+          {%- endif -%}
+          {%- if page.poster -%}
+              {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo or page.slides or page.externalvideo -%}
+              ,
+              {% endif %}
+              <a href="{{ page.poster }}" rel="permalink">poster</a>
+          {%- endif -%}
+          {%- if page.tutorialwebsite -%}
+              {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo or page.slides or page.externalvideo or page.poster -%}
+              ,
+              {% endif %}
+              <a href="{{ page.tutorialwebsite }}" rel="permalink">website</a>
+          {%- endif -%}
+          {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo or page.slides or page.tutorialwebsite or page.externalvideo or page.poster -%}
+          ]
+          {%- endif -%}
+          </p>
+        {% elsif page.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>
+          {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo or page.slides or page.tutorialwebsite or page.externalvideo or page.poster  %}
+          [
+          {%- endif -%}
+          {%- if page.paperurl -%}
+              <a href="{{ page.paperurl }}" rel="permalink">pdf</a>
+          {%- endif -%}
+          {%- if page.codeurl -%}
+              {%- if page.paperurl -%}
+              ,
+              {% endif -%}
+              <a href="{{ page.codeurl }}" rel="permalink">code</a>
+          {%- endif -%}
+          {%- if page.youtube -%}
+              {%- if page.paperurl or page.codeurl -%}
+              ,
+              {% endif %}
+              <a href="https://www.youtube.com/watch?v={{ page.youtube }}" rel="permalink">video</a>
+          {%- endif -%}
+          {%- if page.othervideo -%}
+              {%- if page.paperurl or page.codeurl or page.youtube -%}
+              ,
+              {% endif %}
+              <a href="{{ page.othervideo }}" rel="permalink">video</a>
+          {%- endif -%}
+          {%- if page.externalvideo -%}
+              {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo -%}
+              ,
+              {% endif %}
+              <a href="{{ page.externalvideo }}" rel="permalink">external video</a>
+          {%- endif -%}
+          {%- if page.slides -%}
+              {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo or page.externalvideo -%}
+              ,
+              {% endif %}
+              <a href="{{ page.slides }}" rel="permalink">slides</a>
+          {%- endif -%}
+          {%- if page.poster -%}
+              {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo or page.slides or page.externalvideo -%}
+              ,
+              {% endif %}
+              <a href="{{ page.poster }}" rel="permalink">poster</a>
+          {%- endif -%}
+          {%- if page.tutorialwebsite -%}
+              {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo or page.slides or page.externalvideo or page.poster -%}
+              ,
+              {% endif %}
+              <a href="{{ page.tutorialwebsite }}" rel="permalink">website</a>
+          {%- endif -%}
+          {%- if page.paperurl or page.codeurl or page.youtube or page.othervideo or page.slides or page.tutorialwebsite or page.externalvideo or page.poster -%}
+          ]
+          {%- endif -%}
+          </p>
+        {% endif %}
+
+        {% if page.award %}
+        <p><img src="http://harrieo.github.io/images/award-icon.png" alt="Award Icon" width="23"/> This paper won the <i>{{ page.award }}</i>.</p>
+        {% endif %}
+
+        {% if page.youtube %}
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{ page.youtube }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        {% endif %}
+
+        {% if page.othervideo %}
+          <video width="560" height="315" controls>
+            <source src="{{ page.othervideo }}" type="video/mp4">
+            <a href="{{ page.othervideo }}" rel="permalink">Watch the paper video here.</a>
+          </video><br>
+        {% endif %}
+
+        {% if page.externalvideo %}
+          <p><a href="{{ page.externalvideo }}" rel="permalink">A video for this publication is available here.</a></p>
+        {% endif %}
+    
+        </header>
+      {% endunless %}
+
+      <section class="page__content" itemprop="text">
+        {{ content }}
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+      
+        {%- if page.paperurl -%}
+          <p><a href="{{ page.paperurl }}" rel="permalink">Download the paper here.</a></p>
+        {%- endif -%}
+        {%- if page.slides -%}
+          <p><a href="{{ page.slides }}" rel="permalink">Download the presentation slides here.</a></p>
+        {%- endif -%}
+        {%- if page.poster -%}
+          <p><a href="{{ page.poster }}" rel="permalink">View the poster for this publication here.</a></p>
+        {%- endif -%}
+        {%- if page.codeurl -%}
+          <p><a href="{{ page.codeurl }}" rel="permalink">Code is available here.</a></p>
+        {%- endif -%}
+        {%- if page.tutorialwebsite -%}
+          <p><a href="{{ page.tutorialwebsite }}" rel="permalink">Find the official tutorial website here.</a></p>
+        {%- endif -%}
+
+        {% if page.citation %}
+          <h3>Recommended citation:</h3><p>{{ page.citation }} </p>
+        {% endif %}
+
+        {% if page.googleslidesembed %}
+            <div>
+              <iframe src="{{ page.googleslidesembed | strip }}" frameborder="0" width="700" height="394" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+        {% else %}
+          {% if page.slides %}
+              <div>
+                <object
+                  data='{{ page.slides | strip }}'
+                  type="application/pdf"
+                  width="560"
+                  height="315"
+                >
+                  <iframe
+                    src='{{ page.slides | strip }}'
+                    width="560"
+                    height="315"
+                  >
+                  <p>This browser does not support PDF! Download the slides <a href="{{ page.slides }}">here</a> instead.</p>
+                  </iframe>
+
+                </object>
+              </div>
+          {% endif %}
+        {% endif %}
+
+      </section>
+
+      <footer class="page__meta">
+
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% endif %}
+        {% include page__taxonomy.html %}
+      </footer>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+
+      {% include post_pagination.html %}
+    </div>
+
+    {% if site.comments.provider and page.comments %}
+      {% include comments.html %}
+    {% endif %}
+  </article>
+
+  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
+  {% if page.id and page.related and site.related_posts.size > 0 %}
+    <div class="page__related">
+      {% if site.data.ui-text[site.locale].related_label %}
+        <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
+      {% endif %}
+      <div class="grid__wrapper">
+        {% for post in site.related_posts limit:4 %}
+          {% include archive-single.html type="grid" %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</div>
