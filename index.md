@@ -6,9 +6,11 @@ We also explored overparameterization and memorization/generalization in general
 Last year, I interned in the machine translation team at Apple and extended my experience in sequence modeling, particularly transformers and state space models.
 Recently, I have worked on generative Large Language Models (LLMs) and retrieval augmentation techniques in music recommendation as an intern at Spotify.
 
-## [My Ph.D. thesis](files/AliVardasbi-Thesis.pdf)
+## Thesis
+[Re-Examining Assumptions in Fair and Unbiased Learning to Rank.](files/AliVardasbi-Thesis.pdf) Amsterdam, December 2023.
 
-## [Some highlights from the papers I read.](readings.md)
+## Notes
+[Here](readings.md) I keep some highlights from the papers I read.
 
 ## Publications  
 ### Conferences
