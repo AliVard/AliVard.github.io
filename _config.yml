@@ -1,2 +1,25 @@
-name: Ali Vardasbi
-title: null
+
+locale                   : "en-US"
+title                    : "Ali Vardasbi"
+title_separator          : "-"
+name                     : &name "Ali Vardasbi"
+description              : &description "personal page"
+breadcrumbs              : false # true, false (default)
+words_per_minute         : 160
+future                   : true
+read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
+talkmap_link             : false #change to true to add link to talkmap on talks page
+
+author:
+  name             : "Ali Vardasbi"
+  avatar           : "files/Ali.jpg"
+  # bio              : ""
+  location         : "Amsterdam, The Netherlands"
+  employer         :
+  pubmed           : 
+  googlescholar    : "https://scholar.google.com/citations?user=chzcQgMAAAAJ"
+  email            : "<myfullname>@gmail.com"
+  github           : "AliVard"
+  linkedin         : "ali-vardasbi-44548844/"
+  stackoverflow    : # http://stackoverflow.com/users
+  twitter          : "@AliVardasbi"
