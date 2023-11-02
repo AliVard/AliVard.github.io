@@ -1,5 +1,5 @@
 ---
-layout: archive-taxonomy
+layout: archive-toc
 title: "Ali's readings"
 permalink: /readings/
 author_profile: false
