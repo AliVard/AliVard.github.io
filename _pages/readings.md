@@ -57,4 +57,4 @@ caching of passage vectors, and 2) compared with using an off-theshelf generativ
 jointly optimized with the dual-encoder backbone, which is more
 expressive for the downstream retrieval task.
 
-![I3 retriever](images/Screenshot 2023-11-02 at 16.17.53.png)
+![I3 retriever](../images/Screenshot 2023-11-02 at 16.17.53.png)
