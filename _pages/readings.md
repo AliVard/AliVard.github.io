@@ -2,7 +2,7 @@
 layout: archive-taxonomy
 title: "Ali's readings"
 permalink: /readings/
-author_profile: true
+author_profile: false
 redirect_from:
   - /readings.html
 ---
