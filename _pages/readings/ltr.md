@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Ali's readings"
-permalink: /readings/ltr/
+permalink: /ltr/
 author_profile: false
 sidebar: toc
 redirect_from:
