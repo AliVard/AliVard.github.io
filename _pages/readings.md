@@ -8,10 +8,10 @@ redirect_from:
   - /readings.html
 ---
 
-## [Learning to Rank](readings/ltr)
+## [Learning to Rank](ltr)
 
 
-## [Retrieval Augmentation](readings/rag)
+## [Retrieval Augmentation](rag)
 
 
-## [Sentence Transformer](readings/sber)
+## [Sentence Transformer](sber)

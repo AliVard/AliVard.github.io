@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Ali's readings"
-permalink: /sber/
+permalink: /readings/sber/
 author_profile: false
 sidebar: toc
 redirect_from:

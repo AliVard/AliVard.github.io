@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Ali's readings"
-permalink: /rag/
+permalink: /readings/rag/
 author_profile: false
 sidebar: toc
 redirect_from:
