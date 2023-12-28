@@ -1,14 +1,12 @@
 ---
 layout: archive
-title: "Ali's readings"
+title: "Learning to Rank"
 permalink: /readings/ltr/
 author_profile: false
 sidebar: toc
 redirect_from:
   - /readings/ltr.html
 ---
-
-## Learning to Rank
 
 ### [Unified Off-Policy Learning to Rank: a Reinforcement Learning Perspective](https://arxiv.org/pdf/2306.07528.pdf) (2023)
 
@@ -57,5 +55,5 @@ caching of passage vectors, and 2) compared with using an off-theshelf generativ
 jointly optimized with the dual-encoder backbone, which is more
 expressive for the downstream retrieval task.
 
-![I3 retriever](../images/Screenshot 2023-11-02 at 16.17.53.png)
-![I3 retriever](../images/Screenshot 2023-11-02 at 16.27.27.png)
+![I3 retriever](../../images/Screenshot 2023-11-02 at 16.17.53.png)
+![I3 retriever](../../images/Screenshot 2023-11-02 at 16.27.27.png)

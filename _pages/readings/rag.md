@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Ali's readings"
+title: "Retrieval Augmentation"
 permalink: /readings/rag/
 author_profile: false
 sidebar: toc
@@ -8,7 +8,6 @@ redirect_from:
   - /readings/rag.html
 ---
 
-## Retrieval Augmentation
 
 ### [RUEL: Retrieval-Augmented User Representation with Edge Browser Logs for Sequential Recommendation](https://paperswithcode.com/paper/ruel-retrieval-augmented-user-representation) (2023)
 
