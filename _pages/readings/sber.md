@@ -29,6 +29,20 @@ and can be compared with cosine-similarity
 
 
 ---
+### [MPNet: Masked and Permuted Pre-training for Language Understanding](https://proceedings.neurips.cc/paper_files/paper/2020/file/c3a690be93aa602ee2dc0ccab5b7b67e-Paper.pdf) (2020)
+
+> Since BERT neglects dependency among
+predicted tokens, XLNet introduces permuted language modeling (PLM) for pretraining to address this problem. However, XLNet does not leverage the full
+position information of a sentence and thus suffers from position discrepancy
+between pre-training and fine-tuning. In this paper, we propose MPNet, a novel
+pre-training method that inherits the advantages of BERT and XLNet and avoids
+their limitations. MPNet leverages the dependency among predicted tokens through
+permuted language modeling (vs. MLM in BERT), and takes auxiliary position
+information as input to make the model see a full sentence and thus reducing the
+position discrepancy (vs. PLM in XLNet).
+
+
+---
 ### [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/pdf/2104.08821.pdf) (2022)
 
 > We first describe an unsupervised approach,
@@ -79,9 +93,10 @@ the original sentence or from a generator.
 
 ![DiffCSE model arch](../../images/Screenshot 2023-12-28 at 15.17.01.png)
 
-<!-- ---
-### []() () -->
-<!-- ---
-### []() () -->
+---
+### [A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT](https://arxiv.org/pdf/2302.09419.pdf) (2023)
+
+> TBC
+
 <!-- ---
 ### []() () -->

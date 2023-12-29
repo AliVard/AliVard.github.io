@@ -15,3 +15,5 @@ redirect_from:
 
 
 ## [Sentence Transformer](sber)
+
+## [LLM for Recommendation](rec)
