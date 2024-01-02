@@ -8,20 +8,24 @@ redirect_from:
   - /about.html
 ---
 
+As of December 2023, I have started my new position as a research scientist at [Spotify](https://research.atspotify.com/).
 
+
+## Notes
+[Here](readings) I keep some highlights from the papers I read.
+
+## PhD
 I joined the [University of Amsterdam, IRLab](https://irlab.science.uva.nl/) as a Ph.D. on May 2019, under the supervision of [Prof. Maarten de Rijke](https://staff.fnwi.uva.nl/m.derijke/) and [Dr. Mostafa Dehghani](https://mostafadehghani.com/).
 Our work on fair and unbiased learning to rank (LTR) from user interactions has led to several papers in SIGIR and CIKM.
 We also explored overparameterization and memorization/generalization in general machine learning.
 
-Last year, I interned in the machine translation team at Apple and extended my experience in sequence modeling, particularly transformers and state space models.
+In the summer of 2022, I interned in the machine translation team at Apple and extended my experience in sequence modeling, particularly transformers and state space models.
 
-Recently, I have worked on generative Large Language Models (LLMs) and retrieval augmentation techniques in music recommendation as an intern at Spotify.
+In the last year of my PhD (i.e., 2023), I have worked on generative Large Language Models (LLMs) and retrieval augmentation techniques in music recommendation as an intern at Spotify.
 
-## Thesis
+### Thesis
 [Re-Examining Assumptions in Fair and Unbiased Learning to Rank.](files/AliVardasbi-Thesis.pdf) Amsterdam, December 2023.
 
-## Notes
-[Here](readings) I keep some highlights from the papers I read.
 
 ## Publications  
 ### Conferences
