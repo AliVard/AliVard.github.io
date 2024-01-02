@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: " Sentence Transformer"
+title: "LLM for Recommendation"
 permalink: /readings/rec/
 author_profile: false
 sidebar: toc
@@ -74,10 +74,6 @@ the candidates. The performance from 𝑃𝐴𝐿𝑅𝑣2 has demonstrated
 the effectiveness of incorporating an additional instruction during
 the fine-tuning stage.
 
----
-### [Measuring and Narrowing the Compositionality Gap in Language Models](https://arxiv.org/pdf/2210.03350.pdf) (2023)
-
-> TBC
 
 ---
 ### [Do LLMs Understand User Preferences? Evaluating LLMs On User Rating Prediction](https://arxiv.org/pdf/2305.06474.pdf) (2023)
@@ -111,7 +107,7 @@ from optimal for real-world recommendation scenarios
 
 > Compositional gap. LLMs often
 suffer from the issue of compositional gap, where LLMs have difficulty in generating correct answers to the compositional problem
-like recommending items to users, whereas they can correctly answer all its sub-problems [52](#measuring-and-narrowing-the-compositionality-gap-in-language-models-2023). 
+like recommending items to users, whereas they can correctly answer all its sub-problems [52](glm.md#measuring-and-narrowing-the-compositionality-gap-in-language-models-2023). 
 
 > KAR consists of three stages: (1) knowledge reasoning and generation, (2) knowledge adaptation, and (3) knowledge
 utilization. For knowledge reasoning and generation, to avoid the
