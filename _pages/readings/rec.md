@@ -75,11 +75,132 @@ the effectiveness of incorporating an additional instruction during
 the fine-tuning stage.
 
 ---
-### [Towards Open-World Recommendation with Knowledge Augmentation from Large Language Models](https://arxiv.org/pdf/2306.10933.pdf) (2023)
+### [Measuring and Narrowing the Compositionality Gap in Language Models](https://arxiv.org/pdf/2210.03350.pdf) (2023)
+
+> TBC
+
+---
+### [Do LLMs Understand User Preferences? Evaluating LLMs On User Rating Prediction](https://arxiv.org/pdf/2305.06474.pdf) (2023)
+
+> TBC
 
 
 ---
+### [Large Language Model Augmented Narrative Driven Recommendations](https://arxiv.org/pdf/2306.02250.pdf) (2023)
+
+> TBC 
+
+
+---
+### [Towards Open-World Recommendation with Knowledge Augmentation from Large Language Models](https://arxiv.org/pdf/2306.10933.pdf) (2023)
+
+> we propose
+an Open-World Knowledge Augmented Recommendation Framework with Large Language Models, dubbed KAR, to acquire two
+types of external knowledge from LLMs — the reasoning knowledge on user preferences and the factual knowledge on items.
+We
+introduce factorization prompting to elicit accurate reasoning on
+user preferences. The generated reasoning and factual knowledge
+are effectively transformed and condensed into augmented vectors by a hybrid-expert adaptor in order to be compatible with the
+recommendation task. The obtained vectors can then be directly
+used to enhance the performance of any recommendation model.
+We also ensure efficient inference by preprocessing and prestoring
+the knowledge from the LLM.
+
+>  the results of using LLMs as recommenders are far
+from optimal for real-world recommendation scenarios
+
+> Compositional gap. LLMs often
+suffer from the issue of compositional gap, where LLMs have difficulty in generating correct answers to the compositional problem
+like recommending items to users, whereas they can correctly answer all its sub-problems [52](#measuring-and-narrowing-the-compositionality-gap-in-language-models-2023). 
+
+> KAR consists of three stages: (1) knowledge reasoning and generation, (2) knowledge adaptation, and (3) knowledge
+utilization. For knowledge reasoning and generation, to avoid the
+compositional gap, we propose factorization prompting to break
+down the complex preference reasoning problem into several key
+factors to generate the reasoning knowledge on users and the factual knowledge on items. Then, the knowledge adaptation stage
+transforms the generated knowledge to augmented vectors in recommendation space. In this stage, we propose hybrid-expert adaptor
+module to reduce dimensionality and ensemble multiple experts for
+robust knowledge learning, thus increasing the reliability and availability of the generated knowledge. Finally, in the knowledge utilization stage, the recommendation model incorporates the augmented
+vectors with original domain features for prediction, ...
+
+> provide extra knowledge for classical recommendations for better user or item representations.
+ZEREC [9 (2021)](https://arxiv.org/pdf/2105.08318.pdf) incorporates traditional recommender systems with
+PLMs to generalize from a single training dataset to other unseen
+testing domains. UniSRec [22 (2022)](https://arxiv.org/pdf/2206.05941.pdf) utilizes BERT to encode user
+behaviors, and therefore learns universal sequence representations
+for downstream recommendation. Built upon UniSRec, VQ-Rec [21 (2023)](https://arxiv.org/pdf/2210.12316.pdf)
+further adopts vector quantization techniques to map language embeddings into discrete codes, balancing the semantic knowledge
+and domain features.
+LLM-Rec [44 (2023)](#llm-rec-personalized-recommendation-via-prompting-large-language-models-2023) investigates various prompting strategies to generate
+augmented input text from GPT-3 (text-davinci-003), which improves the recommendation capabilities. Another work [45 (2023)](#large-language-model-augmented-narrative-driven-recommendations-2023) utilizes
+InstructGPT (175B) [48 (2022)](https://arxiv.org/pdf/2203.02155.pdf) for authoring synthetic narrative queries
+from user-item interactions and train retrieval models for narrativedriven recommendation on synthetic data. TagGPT [33 (2023)](https://arxiv.org/pdf/2304.03022.pdf) provides a
+system-level solution of tag extraction and multi-modal tagging in a
+zero-shot fashion equipped with GPT-3.5 (gpt-3.5-turbo).
+
+> **Knowledge Reasoning and Generation.**
+When the request to an LLM is too general, the generated factual knowledge may be correct but useless, as it may not align with the inferred user
+preferences.
+With the factors incorporated into preference reasoning prompt, the complex
+preference reasoning problem can be broken down into simpler
+subproblems for each factor, thus alleviating the compositional gap
+of LLMs.
+*(1) Scenario-specific Factors.* interactive collaboration with LLMs and expert opinions.
+*(2) LLM as Preference Reasoner & Knowledge Provider.* Preference reasoning prompt is constructed with the user’s
+profile description, behavior history, and scenario-specific factors.
+Item factual prompt is designed to fill the knowledge gap
+between the candidate items and the generated reasoning knowledge.
+
+> **Knowledge Adaptation.**
+two modules: The knowledge
+encoder module encodes the generated textual knowledge into
+dense vectors and aggregates them effectively (average pooling). The hybrid-expert
+adaptor converts dense vectors from the semantic space to the
+recommendation space. It tackles dimensionality mismatching and
+allows for noise mitigation.
+
+> **Knowledge Utilization.**
+these augmented vectors are directly treated as
+additional input features. Specifically, we use them as additional
+feature fields in recommendation models, allowing them to explicitly interact with other features. During training, the hybrid-expert
+adaptor module is jointly optimized with the backbone model to
+ensure that the transformation process adapts to the current data
+distribution. 
+
+> *Implementation Details.* We utilize API of a widely-used
+LLM for generating reasoning and factual knowledge. Then, ChatGLM [10] is employed to encode the knowledge, followed by average pooling as the aggregation function in Eq. (1). Each expert in
+the hybrid-expert adaptor is implemented as an MLP with a hidden
+layer size of [128, 32]. The number of experts varies slightly across
+different backbone models, typically with 2-5 shared experts and
+2-6 dedicated experts.
+
+> For
+example, when using FiBiNet as the backbone model on MovieLens1M, KAR achieves a 1.49% increase in AUC and a 2.27% decrease
+in LogLoss.
+
+> KAR shows
+more remarkable improvement in feature interaction models compared to user behavior models. 
+
+> For example, when PRM is employed as the backbone, KAR achieves
+a remarkable increase of 5.71% and 4.71% in MAP@7 and NDCG@7.
+
+> we observe that both reasoning knowledge and
+factual knowledge can improve the performance of backbone models, with reasoning knowledge exhibiting a larger improvement.
+This could be attributed to the fact that reasoning knowledge inferred by the LLMs captures in-depth user preferences, thus compensating for the backbone model’s limitations in reasoning underlying motives and intentions. Additionally, the joint use of both
+reasoning and factual enhancements outperforms using either one
+alone, even achieving a synergistic effect where 1 + 1 > 2. One
+possible explanation is that reasoning knowledge contains external
+information that is not explicitly present in the raw data. When
+used independently, this external knowledge could not be matched
+with candidate items. However, combining the externally generated
+factual knowledge on items from the LLMs aligned with reasoning knowledge allows RSs to gain a better understanding of items
+according to user preferences.
+
+---
 ### [LLM-Rec: Personalized Recommendation via Prompting Large Language Models](https://arxiv.org/pdf/2307.15780.pdf) (2023)
+
+- It seems that this paper only used *content description* and not collaborating signals.
+- Got rejected from ICLR 2024.
 
 > Our empirical experiments show that incorporating the augmented input text generated by LLM leads to improved recommendation performance. Recommendation-driven and engagement-guided prompting strategies
 are found to elicit LLM’s understanding of global and local item characteristics.
@@ -119,7 +240,4 @@ complex feature-based recommendation methods.
 ### []() () -->
 <!-- ---
 ### []() () -->
-<!-- ---
-### []() () -->
-<!-- ---
-### []() () -->
+
