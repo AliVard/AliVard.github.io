@@ -78,8 +78,15 @@ the fine-tuning stage.
 ---
 ### [Do LLMs Understand User Preferences? Evaluating LLMs On User Rating Prediction](https://arxiv.org/pdf/2305.06474.pdf) (2023)
 
-> TBC
+> find that zero-shot LLMs lag behind traditional recommender models that have the access to user
+interaction data, indicating the importance of user interaction data. However, through fine-tuning, LLMs achieve comparable or even
+better performance with only a small fraction of the training data, demonstrating their potential through data efficiency.
 
+> The rating prediction task could be formulated into one of two tasks: (1)
+multi-class classification [(5 classes)]; or (2) regression [(single output)].
+
+> For fine-tuning methods, we use Flan-T5-Base (250M) and Flan-T5-XXL (11B) models in
+the experiments. We set the learning rate to 5e-5, batch size to 64, drop out rate to 0.1 and train 50k steps on all datasets.
 
 ---
 ### [Large Language Model Augmented Narrative Driven Recommendations](https://arxiv.org/pdf/2306.02250.pdf) (2023)
@@ -224,16 +231,33 @@ items, there tends to be a greater similarity in terms of user preferences.
 boosts simple MLP models to achieve superior recommendation performance, surpassing other more
 complex feature-based recommendation methods.
 
-<!-- ---
-### []() () -->
+---
+### [Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt & Predict Paradigm (P5)](https://arxiv.org/pdf/2203.13366.pdf) (2023)
+
+> TBC
+
+---
+### [Recommender Systems with Generative Retrieval](https://arxiv.org/pdf/2305.05065.pdf) (2023)
+
+> To do this, instead of assigning randomly generated atomic IDs to each item, we generate Semantic IDs: a semantically meaningful tuple of codewords for each item that serves as its unique identifier. We use a hierarchical method called RQ-VAE to generate these codewords. Once we have the Semantic IDs for all the items, a Transformer based sequence-to-sequence model is trained to predict the Semantic ID of the next item. Since this model predicts the tuple of codewords identifying the next item directly in an autoregressive manner, it can be considered a generative retrieval model. 
+
+> TIGER is characterized by a new approach to represent each item by a novel "Semantic ID": a sequence of tokens based on the content information about the item (such as its text description). Concretely, given an item’s text description, we can use pre-trained text encoders (e.g., SentenceT5 [25]) to generate dense content embeddings. A quantization scheme can then be applied over the embeddings to form a small set of tokens/codewords (integers). We refer to this ordered tuple of codewords as the Semantic ID of the item. 
+
+> we are the first to use generative Semantic IDs created using an auto-encoder (RQ-VAE [20, 45]) for retrieval models.
 
 
+---
+### [Large Language Models are Competitive Near Cold-start Recommenders for Language- and Item-based Preferences](https://arxiv.org/pdf/2307.14225.pdf) (2023)
+
+> TBC
+
 <!-- ---
-### []() () -->
+### []() ()
+
+> TBC -->
+
 <!-- ---
-### []() () -->
-<!-- ---
-### []() () -->
-<!-- ---
-### []() () -->
+### []() ()
+
+> TBC -->
 

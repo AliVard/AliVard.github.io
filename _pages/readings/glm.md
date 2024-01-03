@@ -82,16 +82,34 @@ to decompose the questions, whereas our self-ask
 model, which explicitly decomposes questions before answering them, deals much better with novel
 inference questions. 
 
-<!-- ---
-### []() () -->
+---
+### [LLaMA: Open and Efficient Foundation Language Models](https://arxiv.org/pdf/2302.13971.pdf) (2023)
 
+> TBC
+
+---
+### [PaLM: Scaling Language Modeling with Pathways](https://arxiv.org/pdf/2204.02311.pdf) (2022)
+
+> TBC
+
+---
+### [GENERALIZATION THROUGH MEMORIZATION: NEAREST NEIGHBOR LANGUAGE MODELS](https://arxiv.org/pdf/1911.00172.pdf) (2020) 
+
+> TBC
+![knn-llm](../../images/Screenshot 2024-01-03 at 12.36.45.png)
 
 <!-- ---
-### []() () -->
+### []() ()
+
+> TBC-->
+
 <!-- ---
-### []() () -->
+### []() ()
+
+> TBC-->
+
 <!-- ---
-### []() () -->
-<!-- ---
-### []() () -->
+### []() ()
+
+> TBC-->
 
