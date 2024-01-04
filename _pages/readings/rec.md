@@ -91,7 +91,19 @@ the experiments. We set the learning rate to 5e-5, batch size to 64, drop out ra
 ---
 ### [Large Language Model Augmented Narrative Driven Recommendations](https://arxiv.org/pdf/2306.02250.pdf) (2023)
 
-> TBC 
+> We use LLMs for authoring synthetic
+narrative queries from user-item interactions with few-shot prompting and train retrieval models for NDR on synthetic queries and
+user-item interaction data. 
+
+> given a user’s interactions, 𝐷𝑢, with items and their accompanying text documents (e.g., reviews,
+descriptions) 𝐷𝑢, selected from a user-item interaction dataset I, we prompt InstructGPT, a 175B parameter
+LLM, to author a synthetic narrative query 𝑞𝑢 based on 𝐷u.
+
+> we only retain some of the items present in {𝑑𝑖 }
+before
+using it for training retrieval models. For this, we use a pre-trained language model to compute the likelihood of the
+query given each user item, 𝑃𝐿𝑀 (𝑞𝑢 |𝑑𝑖), and only retain the top 𝑀 highly scoring item for 𝑞𝑢. In our experiments, we use FlanT5 with 3B parameters for computing and follow Sachan et al. [40] for computing 𝑃𝐿𝑀 (𝑞𝑢 |𝑑𝑖).
+
 
 
 ---
@@ -232,12 +244,12 @@ boosts simple MLP models to achieve superior recommendation performance, surpass
 complex feature-based recommendation methods.
 
 ---
-### [Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt & Predict Paradigm (P5)](https://arxiv.org/pdf/2203.13366.pdf) (2023)
-
-> TBC
-
----
 ### [Recommender Systems with Generative Retrieval](https://arxiv.org/pdf/2305.05065.pdf) (2023)
+
+
+> we
+create semantically meaningful tuple of codewords to serve as a Semantic ID for
+each item. 
 
 > To do this, instead of assigning randomly generated atomic IDs to each item, we generate Semantic IDs: a semantically meaningful tuple of codewords for each item that serves as its unique identifier. We use a hierarchical method called RQ-VAE to generate these codewords. Once we have the Semantic IDs for all the items, a Transformer based sequence-to-sequence model is trained to predict the Semantic ID of the next item. Since this model predicts the tuple of codewords identifying the next item directly in an autoregressive manner, it can be considered a generative retrieval model. 
 
@@ -245,7 +257,40 @@ complex feature-based recommendation methods.
 
 > we are the first to use generative Semantic IDs created using an auto-encoder (RQ-VAE [20, 45]) for retrieval models.
 
+---
+### [Augmenting the User-Item Graph with Textual Similarity Models](https://arxiv.org/pdf/2109.09358.pdf) (2021)
 
+> A paraphrase similarity model
+is applied to widely available textual data – such as reviews and
+product descriptions – yielding new semantic relations that are
+added to the user-item graph. This increases the density of the
+graph without needing further labeled data.
+
+> we complement the implicit item similarity
+learnt from interactions by introducing explicit semantic relations
+based on textual attributes.
+
+
+---
+### [Recommendation as Language Processing (RLP): A Unified Pretrain, Personalized Prompt & Predict Paradigm (P5)](https://arxiv.org/pdf/2203.13366.pdf) (2023)
+
+> In P5, all data such as user-item interactions, user descriptions, item metadata, and user reviews are converted to a
+common format — natural language sequences. The rich information from natural language assists P5 to capture deeper semantics
+for personalization and recommendation. Specifically, P5 learns
+different tasks with the same language modeling objective during
+pretraining. 
+
+> With adaptive personalized prompt for different
+users, P5 is able to make predictions in a zero-shot or few-shot
+manner and largely reduces the necessity for extensive fine-tuning.
+
+> The
+collection covers five different task families – rating, sequential
+recommendation, explanation, review, and direct recommendation. 
+
+> to make P5 aware of the personalized information
+contained in the input sequence, we also apply whole-word embeddings W to indicate whether consecutive sub-word tokens are
+from the same original word.
 ---
 ### [Large Language Models are Competitive Near Cold-start Recommenders for Language- and Item-based Preferences](https://arxiv.org/pdf/2307.14225.pdf) (2023)
 
@@ -255,7 +300,18 @@ complex feature-based recommendation methods.
 ### []() ()
 
 > TBC -->
+<!-- ---
+### []() ()
 
+> TBC -->
+<!-- ---
+### []() ()
+
+> TBC -->
+<!-- ---
+### []() ()
+
+> TBC -->
 <!-- ---
 ### []() ()
 
