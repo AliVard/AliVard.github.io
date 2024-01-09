@@ -98,10 +98,16 @@ inference questions.
 > TBC
 ![knn-llm](../../images/Screenshot 2024-01-03 at 12.36.45.png)
 
-<!-- ---
-### []() ()
+---
+### [Test-Time Prompt Tuning for Zero-Shot Generalization in Vision-Language Models](https://proceedings.neurips.cc/paper_files/paper/2022/file/5bf2b802e24106064dc547ae9283bb0c-Paper-Conference.pdf) (2022)
 
-> TBC-->
+> we propose test-time prompt tuning (TPT), a method that can learn
+adaptive prompts on the fly with a single test sample. For image classification, TPT
+optimizes the prompt by minimizing the entropy with confidence selection so that
+the model has consistent predictions across different augmented views of each test
+sample.
+
+> TBC
 
 <!-- ---
 ### []() ()

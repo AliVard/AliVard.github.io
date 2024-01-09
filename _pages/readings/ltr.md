@@ -57,3 +57,87 @@ expressive for the downstream retrieval task.
 
 ![I3 retriever](../../images/Screenshot 2023-11-02 at 16.17.53.png)
 ![I3 retriever](../../images/Screenshot 2023-11-02 at 16.27.27.png)
+
+
+---
+### [Multivariate Representation Learning for Information Retrieval](https://arxiv.org/pdf/2304.14522.pdf) (2023)
+
+>  Instead of learning a vector for each query and
+document, our framework learns a multivariate distribution and
+uses negative multivariate KL divergence to compute the similarity
+between distributions.
+For simplicity and efficiency reasons, we
+assume that the distributions are multivariate normals and then
+train large language models to produce mean and variance vectors
+for these distributions. 
+
+> TBC
+
+---
+### [Scalable and Effective Generative Information Retrieval](https://arxiv.org/pdf/2311.09134.pdf) (2023)
+
+> TBC
+
+---
+### [RankZephyr: Effective and Robust Zero-Shot Listwise Reranking is a Breeze!](https://arxiv.org/pdf/2312.02724.pdf) (2023)
+
+> TBC
+
+
+---
+### [Learning to Rank in Generative Retrieval](https://arxiv.org/pdf/2306.15222.pdf) (2023)
+
+> LTRGR enables generative retrieval to learn to rank passages directly, optimizing
+the autoregressive model toward the final passage ranking
+target via a rank loss. This framework only requires an additional learning-to-rank training phase to enhance current
+generative retrieval systems and does not add any burden
+to the inference stage
+
+> TBC
+
+
+---
+### [Found in the Middle: Permutation Self-Consistency Improves Listwise Ranking in Large Language Models](https://arxiv.org/pdf/2310.07712.pdf) (2023)
+
+> TBC
+
+
+---
+### [LARGE LANGUAGE MODELS ARE EFFECTIVE TEXT RANKERS WITH PAIRWISE RANKING PROMPTING](https://arxiv.org/pdf/2306.17563.pdf) (2023)
+
+> TBC
+
+
+---
+### [RankingGPT: Empowering Large Language Models in Text Ranking with Progressive Enhancement](https://arxiv.org/pdf/2311.16720.pdf) (2023)
+
+> objective of LLMs, which typically centers
+around next token prediction, and the objective
+of evaluating query-document relevance. To address this gap and fully leverage LLM potential
+in text ranking tasks, we propose a progressive
+multi-stage training strategy. Firstly, we introduce a large-scale weakly supervised dataset of
+relevance texts to enable the LLMs to acquire
+the ability to predict relevant tokens without
+altering their original training objective. Subsequently, we incorporate supervised training to
+further enhance LLM ranking capability
+
+> TBC
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
