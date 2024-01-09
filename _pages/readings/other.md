@@ -18,7 +18,7 @@ networks by incorporating generative recurrent feedback.
 ... CNN-F shows considerably improved adversarial robustness
 over conventional feedforward CNNs on standard benchmarks.
 
-> ![code][../../images/Screenshot 2024-01-05 at 15.30.53.png]
+> ![code](../../images/Screenshot 2024-01-05 at 15.30.53.png)
 
 > TBC
 
