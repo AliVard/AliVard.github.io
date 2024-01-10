@@ -27,22 +27,54 @@ We then design a contrastive learning framework with a momentum encoder and a me
 
 > TBC
 
+---
+### [Atlas: Few-shot Learning with Retrieval Augmented Language Models](https://arxiv.org/pdf/2208.03299.pdf) (2022)
+
+> TBC
+
 
 ---
 ### [RAVEN: In-Context Learning with Retrieval Augmented Encoder-Decoder Language Models](https://arxiv.org/pdf/2308.07922.pdf) (2023)
 
-> TBC
+> We
+find that [ATLAS](#atlas-few-shot-learning-with-retrieval-augmented-language-models-2022) exhibits a certain in-context learning ability; however, due to a mismatch between
+pretraining and testing and a limited context length—issues that are common to existing encoderdecoder LMs trained with masked language modeling—its few-shot performance is not stable and
+providing more than, e.g., 8-shot, examples does not lead to further improvement.
 
----
-### [MAKING RETRIEVAL-AUGMENTED LANGUAGE MODELS ROBUST TO IRRELEVANT CONTEXT](https://arxiv.org/pdf/2310.01558v1.pdf) (2023)
+> While there is growing interest in this area, most studies have focused on incontext learning with decoder-only LMs, e.g., GPT-3 (Brown et al., 2020). However, bidirectional
+LMs like BERT (Devlin et al., 2019) and T5 (Raffel et al., 2020) have been shown to achieve
+superior performance on various natural language understanding tasks, indicating that they may
+offer unique advantages for in-context learning as well.
+...
+ For instance, Patel
+et al. (2023) demonstrate that bidirectional models can outperform decoder-only LMs of a similar
+scale regarding in-context learning; however, there is still a significant performance gap compared to
+decoder-only models on a much larger scale.
 
+> While there
+has been some research on in-context learning with retrieval-augmented decoder-only LMs, which
+can be straightforwardly implemented by concatenating retrieved passages with the query as the
+input of the LM (Mallen et al., 2022; Shi et al., 2023; Khattab et al., 2022), in-context learning with
+retrieval-augmented encoder-decoder LMs, such as ATLAS, remains unexplored
 > TBC
 
 ---
 ### [RETRIEVAL MEETS LONG CONTEXT LARGE LANGUAGE MODELS](https://arxiv.org/pdf/2310.03025.pdf) (2023)
 
+> we find that LLM
+with 4K context window using simple retrieval-augmentation at generation can
+achieve comparable performance to finetuned LLM with 16K context window via
+positional interpolation on long context tasks, while taking much less computation.
+More importantly, we demonstrate that retrieval can significantly improve the
+performance of LLMs regardless of their extended context window sizes
+
 > TBC
 
+
+---
+### [MAKING RETRIEVAL-AUGMENTED LANGUAGE MODELS ROBUST TO IRRELEVANT CONTEXT](https://arxiv.org/pdf/2310.01558v1.pdf) (2023)
+
+> TBC
 
 ---
 ### [UNDERSTANDING RETRIEVAL AUGMENTATION FOR LONG-FORM QUESTION ANSWERING](https://arxiv.org/pdf/2310.12150.pdf) (2023)
@@ -79,11 +111,6 @@ We then design a contrastive learning framework with a momentum encoder and a me
 
 > TBC
 
-
----
-### [Do LLMs Understand User Preferences? Evaluating LLMs On User Rating Prediction](https://arxiv.org/pdf/2305.06474.pdf) (2023)
-
-> TBC
 
 
 ---
