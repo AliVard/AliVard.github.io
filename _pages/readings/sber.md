@@ -98,5 +98,34 @@ the original sentence or from a generator.
 
 > TBC
 
-<!-- ---
-### []() () -->
+---
+### [NUGGET: Neural Agglomerative Embeddings of Text](https://proceedings.mlr.press/v202/qin23a/qin23a.pdf) (2023)
+
+> NUGGET , is an encoding strategy employing
+hard-attention to map linguistic input into a fractional number of dynamically selected embeddings called nuggets.
+..
+NUGGET leads to an intrinsically interesting representation,
+where the encoder learns to favor clausal text delimiters,
+such as punctuation and conjunction words. Moreover, without any explicit guidance during training, each resultant
+nugget encodes a contiguous segment of text preceding
+these clausal delimiters
+
+> Instead of producing vectors that do not correspond to actual tokens, such as the CLS or averaged pooling over all
+token embeddings, we leverage the fact that contextual token embeddings carry the semantics of their surrounding
+texts, and use them as document representations. We use
+a feedforward network to measure the amount of context
+information of every token embedding, then select the most
+informative vectors as the output.
+
+> Previous work
+on the study of transformer language models shows that
+a large amount of self-attention focuses on the delimiter
+tokens, such as punctuations, and they may be used as no-op
+Clark et al. (2019). However, our study suggests that they
+may also serve as summary tokens, as predicting the end of
+a segment requires the model to understand the semantics
+of the preceding texts.
+It is worth noting that in our case study, NUGGET prefers
+EOS while BOS is never selected, contrary to the practice
+of Wang et al. (2021). Also, NUGGET is not necessarily
+selecting the most frequent tokens

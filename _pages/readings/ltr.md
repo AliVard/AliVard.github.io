@@ -124,18 +124,93 @@ further enhance LLM ranking capability
 > TBC
 
 
+---
+### [Pseudo-Relevance Feedback for Multiple Representation Dense Retrieval](https://arxiv.org/pdf/2106.11251.pdf) (2021)
+
+> we conduct the first study
+into the potential for multiple representation dense retrieval to be
+enhanced using pseudo-relevance feedback.
+
+> in multiple representation dense
+retrieval – as proposed by ColBERT [16] – each term of the queries
+and documents is represented by a single embedding. For each query
+embedding, one per query term, the nearest document token embeddings are identified using an approximate nearest neighbour search,
+before a final re-scoring to obtain exact relevance estimations.
+
+> In this work, we are concerned with applying pseudo-relevance
+feedback in a multiple representation dense retrieval setting. Indeed,
+as retrieval uses multiple representations, this allows additional
+useful embeddings to be appended to the query representation.
+
+> ColBERT-PRF applies clustering to the embeddings occurring in the pseudo-relevant set, and then identifies the most discriminative embeddings among the cluster centroids. These centroids are
+then appended to the embeddings of the original query.
+
+---
+### [Multi-View Document Representation Learning for Open-Domain Dense Retrieval](https://arxiv.org/pdf/2203.08372.pdf) (2022)
+
+> a document can usually answer multiple
+potential queries from different views. So the
+single vector representation of a document is
+hard to match with multi-view queries, and
+faces a semantic mismatch problem. This
+paper proposes a multi-view document representation learning framework, aiming to produce multi-view embeddings to represent documents and enforce them to align with different queries. 
+
+> As for the multi-vector models, cross-encoder
+architectures perform better by computing
+deeply-contextualized representations of querydocument pairs, but are computationally expensive
+and impractical for first-stage large-scale retrieval
+
+> So we first modify the
+bi-encoder architecture, abandon [CLS] token and add multiple [Viewer] tokens to the document input.
+The representation of the viewers in the last layer
+is then used as the multi-view representations.
+
+---
+### [Sparse, Dense, and Attentional Representations for Text Retrieval](https://watermark.silverchair.com/tacl_a_00369.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAA0cwggNDBgkqhkiG9w0BBwagggM0MIIDMAIBADCCAykGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM1j3Sk8VJisYTiuOcAgEQgIIC-o3_L0YeH8TYjGgXnxDwJbRNn2wMKzUIkhTBkUFhjayvphxLRbnUsBdQFoel4iDWtji5H_0mlzQxaHfhAUpN040ctwHO59-RpB3c3E9UH-LoXxoaIUP_GACsrUr0Dw5pcIx_PFqxGZ3ciMg0qpLA_RAT4mC3PU5VEWSgnG5-4qDoZto3RugPx5_k_vHbGS2NKbNZ0HVWIRyg4UFUWz8fO_68xfLrVrAPp3DXPSAuvy1X_ZKNw8VacJukDuSJx2Q96dmoDWhj3972MZlss7SZORktQwNAjGXYm3utwJsD2qm2agf_K9ZvkBr4kFZYfMh9HZ5aMs6ufMLAcbSm9_rQbZLcjkktHGqb4T-add_gZoN2rWg8X2FNOcgkl7ikj-UROgg7k4HekMQaTy3zVq8LkyU6aZfDyZnCkTNO_yo1Vt0yOH6XE1ngkxegvGievLboCxvdHzP3JHjJ3FhZsORY4cggKkcUUjUUxj0TUf9rz3I9FhCDfn6gXz_8jhvvpw8tUttbLyoogFF4uUy6q6M7Jy70MVZnEb5HB_cl8ChGEjm-swKhDScYJcfgNfduCJk3DWQHbK9YA3N88s5Zkvxy6dNv8kWolCka68eCxuUGe0smZING_3VSfo18CnBq1JMI1P2FU0t_nw0BO6-WD-uv0E3mkoa3U1pHj61YVYgG41jGnB5sNt9mgUPisUvzG8TRxvdWW9nPh0Lzj1fTPk1WKveSa95Jr1Ov9sLkY-_e48b57du31lLQhIxbLsQBwk2HmvINcLAuPMVe96j16e_XnL2pTrLn6tiCIghKokgNtNkP4UGMvhGB0bLG2aN-lAjXSm6tie29PWNWqXocz8ivma6h6URnuiH11nXQrZRogkorFblWQMe-aG76kRu0OevJNrzJkccrTksNmZr8jNMRycOpYoXdGcTnR-EJYnHOwIU4gFMbkt1u6BVrG9f5QL59XB6CBM8MGtkSFXJHqLSXqg17yFBvDaJWI78fGxIyphwrJL3rz0gtvf32Cg) (2021)
+
+> we offer a multi-vector encoding model,
+which is computationally feasible for retrieval
+like the dual-encoder architecture and achieves
+significantly better quality.
+
+> A fundamental question is how the capacity of
+dual encoders varies with the embedding size k.
+
+> We therefore propose a
+new architecture that represents each document as
+a fixed-size set of m vectors. Relevance scores
+are computed as the maximum inner product over
+this set.
+
+> We define a single-vector
+representation of the query x as f
+(1)(x) = h1(x),
+and a multi-vector representation of document
+y as f
+(m)
+(y) = [h1(y), . . . , hm(y)], the first m
+representation vectors for the sequence of tokens
+in y, with m < T. 
+
+> Cross-attentional architectures can be viewed as a generalization of the
+multi-vector model: (1) set m = Tmax (one vector
+per token); (2) compute one vector per token in
+the query; (3) allow more expressive aggregation
+over vectors than the simple maxemployed above.
+
+
 <!-- ---
 ### []() ()
 
 > TBC-->
-
-
 <!-- ---
 ### []() ()
 
 > TBC-->
+<!-- ---
+### []() ()
 
-
+> TBC-->
 <!-- ---
 ### []() ()
 
