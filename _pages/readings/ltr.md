@@ -199,18 +199,36 @@ the query; (3) allow more expressive aggregation
 over vectors than the simple maxemployed above.
 
 
+---
+### [Unsupervised Dense Information Retrieval with Contrastive Learning](https://arxiv.org/pdf/2112.09118.pdf) (2022)
+
+> TBC
+
+
+---
+### [Questions Are All You Need to Train a Dense Passage Retriever](https://arxiv.org/pdf/2206.10658.pdf) (2023)
+
+> TBC
+
+
 <!-- ---
 ### []() ()
 
 > TBC-->
+
+
 <!-- ---
 ### []() ()
 
 > TBC-->
+
+
 <!-- ---
 ### []() ()
 
 > TBC-->
+
+
 <!-- ---
 ### []() ()
 

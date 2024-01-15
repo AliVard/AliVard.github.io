@@ -95,8 +95,34 @@ inference questions.
 ---
 ### [GENERALIZATION THROUGH MEMORIZATION: NEAREST NEIGHBOR LANGUAGE MODELS](https://arxiv.org/pdf/1911.00172.pdf) (2020) 
 
-> TBC
+> We introduce kNN-LM, an approach that extends a pre-trained LM by linearly interpolating its next
+word distribution with a k-nearest neighbors (kNN) model. The nearest neighbors are computed
+according to distance in the pre-trained embedding space and can be drawn from any text collection, including the original LM training data. This approach allows rare patterns to be memorized
+explicitly, rather than implicitly in model parameters.
+
+> This can be done with a single forward pass over a text collection (potentially including the original
+LM training set), where the resulting context-target pairs are stored in a key-value datastore that is
+queried during inference.
 ![knn-llm](../../images/Screenshot 2024-01-03 at 12.36.45.png)
+
+> To search over this large datastore, we use FAISS (Johnson et al.,
+2017), an open source library for fast nearest neighbor retrieval in high dimensional spaces. 
+
+> A FAISS index is then created using 1M randomly sampled keys
+to learn 4096 cluster centroids. For efficiency, keys are quantized to 64-bytes. During inference,
+we retrieve k = 1024 neighbors, and the index looks up 32 cluster centroids while searching for
+the nearest neighbors.
+
+> retrieving nearest neighbors from the corpus outperforms training on it.
+
+> performance monotonically improves as more neighbors are returned, and suggests that even larger
+improvements may be possible with a higher value of k. Nonetheless, even a small number of
+neighbors (k = 8) is enough to achieve a new state of the art.
+
+> Interpolating the memorizing LM with the original LM improves validation perplexity by just 0.1
+– compared to 1.9 from kNN-LM. This result suggests that although the Transformer is expressive
+enough to memorize all training examples, learning to do so does not result in context representations
+that generalize. In contrast, kNN-LM memorizes training data while improving generalization.
 
 ---
 ### [Test-Time Prompt Tuning for Zero-Shot Generalization in Vision-Language Models](https://proceedings.neurips.cc/paper_files/paper/2022/file/5bf2b802e24106064dc547ae9283bb0c-Paper-Conference.pdf) (2022)
