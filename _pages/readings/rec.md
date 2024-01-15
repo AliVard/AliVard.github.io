@@ -296,22 +296,47 @@ from the same original word.
 
 > TBC
 
+---
+### [User Embedding Model for Personalized Language Prompting](https://arxiv.org/pdf/2401.04858.pdf) (2024)
+
+> we introduce a new User Embedding Module (UEM) that efficiently processes
+user history in free-form text by compressing
+and representing them as embeddings, to use
+them as soft prompts to a LM.
+
+> Recent research has predominantly concentrated
+on examining smaller segments of user history by
+selecting representative samples from a users’ history (Salemi et al., 2023). 
+
+> we employ an embedding-based technique to compress
+the user’s entire history, creating a sequence of
+representative user embedding tokens.
+... Further, since the User Embedding Module (UEM) module is co-trained with the LM, the
+representations are learned in-context for the specific tasks. ... 
+Compared to the naive approach of concatenating user history and incurring O(n^2) compute
+cost for self-attention, our approach demonstrates
+a cheap way to incorporate history metadata as an
+embedding thus dramatically reducing the required
+compute.
+
 <!-- ---
 ### []() ()
 
 > TBC -->
+
+
 <!-- ---
 ### []() ()
 
 > TBC -->
+
+
 <!-- ---
 ### []() ()
 
 > TBC -->
-<!-- ---
-### []() ()
 
-> TBC -->
+
 <!-- ---
 ### []() ()
 
