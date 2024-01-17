@@ -211,11 +211,24 @@ over vectors than the simple maxemployed above.
 > TBC
 
 
-<!-- ---
-### []() ()
+---
+### [Black-box Adversarial Attacks against Dense Retrieval Models: A Multi-view Contrastive Learning Method](https://dl.acm.org/doi/pdf/10.1145/3583780.3614793) (2023)
 
-> TBC-->
-
+> Deriving multiple viewers from the initial set of 𝐾 candidates.
+The key idea is to find several indicative viewers to represent the
+documents within the initial set ... Here, the viewer is defined as a cluster of documents
+sharing the same topic. 
+... Given a query 𝑞, we first obtain the initial set 𝑅 of 𝐾
+candidates ... We apply clustering to the representations of 𝐾 candidates to
+obtain 𝑛 clusters where 𝑛 ≪ 𝐾, and leverage the representation of
+each centroid as a topical viewer.
+... To obtain 𝑛 multi-view
+representations 𝑊 = {𝒘1,𝒘2, . . . ,𝒘𝒏} aligned to viewers, following [5, 6], we encourage the 𝒘𝒊 and its corresponding viewer 𝒗𝒊 to
+be similar while retaining the original information by minimizing
+the square loss,
+...
+We maintain the distinction between multi-view representations
+by maximizing the cosine similarity between them
 
 <!-- ---
 ### []() ()
