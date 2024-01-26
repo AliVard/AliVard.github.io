@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Retrieval Augmentation"
+title: "Retrieval Augmentation and In-Context Learning"
 permalink: /readings/rag/
 author_profile: false
 sidebar: toc
@@ -190,6 +190,37 @@ across five diverse corpora.
 ### [Augmented Language Models: a Survey](https://arxiv.org/pdf/2302.07842.pdf) (2023)
 
 > TBC
+
+---
+### [You can’t pick your neighbors, or can you? When and how to rely on retrieval in the kNN-LM](https://arxiv.org/pdf/2210.15859.pdf) (2022)
+
+> we explore
+the importance of lexical and semantic matching in the context of items retrieved by kNNLM. We find two trends: (1) the presence of
+large overlapping n-grams between the datastore and evaluation set plays an important factor in strong performance, even when the datastore is derived from the training data; and (2)
+the kNN-LM is most beneficial when retrieved
+items have high semantic similarity with the
+query.
+![example](../../images/Screenshot 2024-01-17 at 19.12.49.png)
+> TBC
+
+
+---
+### [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?](https://arxiv.org/pdf/2202.12837.pdf) (2022)
+
+> TBC
+
+
+---
+### [Ground-Truth Labels Matter: A Deeper Look into Input-Label Demonstrations](https://arxiv.org/pdf/2205.12685.pdf) (2022)
+
+> TBC
+
+
+---
+### [LARGER LANGUAGE MODELS DO IN-CONTEXT LEARNING DIFFERENTLY](https://arxiv.org/pdf/2303.03846.pdf) (2023)
+
+> TBC
+
 
 <!-- ---
 ### []() ()
