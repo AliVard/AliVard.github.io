@@ -222,29 +222,64 @@ query.
 > TBC
 
 
+---
+### [SAIL: Search-Augmented Instruction Learning](https://arxiv.org/pdf/2305.15225.pdf) (2023)
+
+search engine --> duckduckgo
+
+> TBC
+
+
+---
+### [RECITATION-AUGMENTED LANGUAGE MODELS](https://arxiv.org/pdf/2210.01296.pdf) (2023)
+
+by Google research
+
+> TBC
+
+
+---
+### [BlenderBot 3: a deployed conversational agent that continually learns to responsibly engage](https://arxiv.org/pdf/2208.03188.pdf) (2022)
+
+by Meta AI -->  [Mojeek](https://www.mojeek.com/)
+
+> TBC
+
+
+---
+### [Internet-Augmented Dialogue Generation](https://arxiv.org/pdf/2107.07566.pdf) (2021)
+
+by Facebook AI research --> bing search api
+
+> TBC
+
+
+---
+### [FRESHLLMS: REFRESHING LARGE LANGUAGE MODELS WITH SEARCH ENGINE AUGMENTATION](https://arxiv.org/pdf/2310.03214.pdf) (2023)
+
+by Google and OpenAI
+
+> TBC
+
 <!-- ---
 ### []() ()
 
 > TBC-->
 
+<!-- ---
+### []() ()
+
+> TBC-->
 
 <!-- ---
 ### []() ()
 
 > TBC-->
 
-
 <!-- ---
 ### []() ()
 
 > TBC-->
-
-
-<!-- ---
-### []() ()
-
-> TBC-->
-
 
 <!-- ---
 ### []() ()
