@@ -29,6 +29,48 @@ over conventional feedforward CNNs on standard benchmarks.
 > TBC
 
 
+---
+### [Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention](https://arxiv.org/pdf/2006.16236.pdf) (2020)
+
+> we introduce the linear transformer model
+... We achieve this
+by using a kernel-based formulation of self-attention and
+the associative property of matrix products to calculate the
+self-attention weigh.
+
+> ![attention](../../images/Screenshot 2024-02-16 at 10.57.05.png)
+
+> Given such a kernel with a feature representation φ (x) we
+can rewrite equation 2 as follows,
+![kernel](../../images/Screenshot 2024-02-16 at 11.04.25.png)
+
+> Note that the feature function that corresponds to the exponential kernel is infinite
+dimensional, which makes the linearization of exact softmax attention infeasible. On the other hand, the polynomial
+kernel, for example, has an exact finite dimensional feature
+map and has been shown to work equally well with the exponential or RBF kernel (Tsai et al., 2019). The computational
+cost for a linearized polynomial transformer of degree 2
+is O(ND^2M). This makes the computational complexity. Note that this is true in practice
+since we want to be able to process sequences with tens of
+thousands of elements.
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+
 <!-- ---
 ### []() ()
 

@@ -14,6 +14,9 @@ redirect_from:
 ## [Retrieval Augmentation](rag)
 
 
+## [In-Context Learning](icl)
+
+
 ## [Sentence Transformer](sber)
 
 
