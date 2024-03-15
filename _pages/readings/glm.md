@@ -82,15 +82,18 @@ to decompose the questions, whereas our self-ask
 model, which explicitly decomposes questions before answering them, deals much better with novel
 inference questions. 
 
+
 ---
 ### [LLaMA: Open and Efficient Foundation Language Models](https://arxiv.org/pdf/2302.13971.pdf) (2023)
 
 > TBC
 
+
 ---
 ### [PaLM: Scaling Language Modeling with Pathways](https://arxiv.org/pdf/2204.02311.pdf) (2022)
 
 > TBC
+
 
 ---
 ### [GENERALIZATION THROUGH MEMORIZATION: NEAREST NEIGHBOR LANGUAGE MODELS](https://arxiv.org/pdf/1911.00172.pdf) (2020) 
@@ -124,6 +127,7 @@ neighbors (k = 8) is enough to achieve a new state of the art.
 enough to memorize all training examples, learning to do so does not result in context representations
 that generalize. In contrast, kNN-LM memorizes training data while improving generalization.
 
+
 ---
 ### [Test-Time Prompt Tuning for Zero-Shot Generalization in Vision-Language Models](https://proceedings.neurips.cc/paper_files/paper/2022/file/5bf2b802e24106064dc547ae9283bb0c-Paper-Conference.pdf) (2022)
 
@@ -135,10 +139,28 @@ sample.
 
 > TBC
 
+---
+### [Towards Revealing the Mystery behind Chain of Thought: A Theoretical Perspective](https://openreview.net/attachment?id=qHrADgAdYu&name=pdf) (NeurIPS 2023)
+
+> TBC
+
+---
+### [Random-Access Infinite Context Length for Transformers](https://openreview.net/attachment?id=7eHn64wOVy&name=pdf) (NeurIPS 2023)
+
+> TBC
+
+
 <!-- ---
 ### []() ()
 
 > TBC-->
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
 
 <!-- ---
 ### []() ()

@@ -168,6 +168,8 @@ top-n demonstration as the positive demonstrations,
 and the bottom-n as the hard negative demonstrations.
 ...
 Our retriever is a dual encoder ...
+
+
 ---
 ### [Learning to Retrieve In-Context Examples for Large Language Models](https://arxiv.org/pdf/2307.07164.pdf) (2024)
 
@@ -200,6 +202,8 @@ in-context learning, the goal of retrieval augmentation is to improve the perfor
 downstream tasks by retrieving informative examples [Li et al., 2023](#dricl-demonstration-retrieved-in-context-learning-2023); (Luo et al., 2023).
 
 > ![results](../../images/Screenshot 2024-02-16 at 16.38.40.png)
+
+
 ---
 ### [RetICL: Sequential Retrieval of In-Context Examples with Reinforcement Learning](https://arxiv.org/pdf/2305.14502.pdf) (2023)
 
@@ -235,6 +239,28 @@ generates a correct solution with high probability
 how to solve the problem, rather than getting it
 correct by guessing or using unsound reasoning
 to arrive at a final answer.
+
+
+---
+### [FiD-ICL: A Fusion-in-Decoder Approach for Efficient In-Context Learning](https://aclanthology.org/2023.acl-long.454.pdf) (2023)
+
+> TBC
+
+---
+### [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?](https://arxiv.org/pdf/2202.12837.pdf) (2022)
+
+> TBC
+
+
+---
+### [The Learnability of In-Context Learning](https://proceedings.neurips.cc/paper_files/paper/2023/file/73950f0eb4ac0925dc71ba2406893320-Paper-Conference.pdf) (NeurIPS 2023 poster)
+
+> TBC
+
+<!-- ---
+### []() ()
+
+> TBC-->
 
 
 <!-- ---
