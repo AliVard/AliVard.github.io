@@ -150,10 +150,10 @@ sample.
 > TBC
 
 
-<!-- ---
-### []() ()
+---
+### [LIMA: Less Is More for Alignment](https://proceedings.neurips.cc/paper_files/paper/2023/file/ac662d74829e4407ce1d126477f4a03a-Paper-Conference.pdf) (NeurIPS 2023)
 
-> TBC-->
+> TBC
 
 
 <!-- ---
