@@ -199,17 +199,11 @@ the query; (3) allow more expressive aggregation
 over vectors than the simple maxemployed above.
 
 
----
-### [Unsupervised Dense Information Retrieval with Contrastive Learning](https://arxiv.org/pdf/2112.09118.pdf) (2022)
-
-> TBC
-
 
 ---
-### [Questions Are All You Need to Train a Dense Passage Retriever](https://arxiv.org/pdf/2206.10658.pdf) (2023)
+### [Rethinking the Role of Token Retrieval in Multi-Vector Retrieval](https://openreview.net/attachment?id=ZQzm0Z47jz&name=pdf) (NeurIPS 2023)
 
 > TBC
-
 
 ---
 ### [Black-box Adversarial Attacks against Dense Retrieval Models: A Multi-view Contrastive Learning Method](https://dl.acm.org/doi/pdf/10.1145/3583780.3614793) (2023)
@@ -229,6 +223,38 @@ the square loss,
 ...
 We maintain the distinction between multi-view representations
 by maximizing the cosine similarity between them
+
+
+
+---
+### [Unsupervised Dense Information Retrieval with Contrastive Learning](https://arxiv.org/pdf/2112.09118.pdf) (2022)
+
+> TBC
+
+
+---
+### [Questions Are All You Need to Train a Dense Passage Retriever](https://arxiv.org/pdf/2206.10658.pdf) (2023)
+
+> TBC
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
 
 <!-- ---
 ### []() ()
