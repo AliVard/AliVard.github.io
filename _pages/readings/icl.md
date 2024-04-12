@@ -257,6 +257,85 @@ to arrive at a final answer.
 
 > TBC
 
+---
+### [What Makes Good In-Context Examples for GPT-3?](https://arxiv.org/pdf/2101.06804.pdf) (2021)
+
+> TBC
+
+> we randomly permute the order
+of in-context examples in the NQ dataset for the
+proposed KATEnli+sts-b method, and conduct the
+experiments for 3 different orders. Additionally,
+we explore the reverse order where d(xi
+, x) ≤
+d(xj , x) whenever i < j. The results are presented in Table 9. On this particular NQ dataset,
+the reverse order performs the best. One possible explanation is that since tokens next to each
+other have similar positional embeddings, putting
+the most similar sentences close to the test example may be helpful for GPT-3 to leverage the
+corresponding information. However, we also did
+the experiments on the WQ and TriviaQA and find
+that the default order performs slightly better than
+the reverse order. Hence, the choice of orders is
+data-dependent. Addtionally, it can be observed
+that the variation among the NQ results tends to
+be quite small (compared with the difference between the random baseline and KATE), indicating
+that the example order does not have a significant
+impact on KATE’s performance
+
+> TBC
+
+---
+### [Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity](https://arxiv.org/pdf/2104.08786.pdf) (2022)
+
+> We
+demonstrate that the order in which the samples are provided can make the difference between near state-of-the-art and random guess
+performance
+...
+it is
+present across model sizes (even for the largest
+current models), it is not related to a specific
+subset of samples, and that a given good permutation for one model is not transferable to
+another.
+...
+we use the generative nature
+of language models to construct an artificial
+development set and based on entropy statistics of the candidate permutations on this set,
+we identify performant prompts. Our method
+yields a 13% relative improvement for GPTfamily models across eleven different established text classification tasks.
+
+> we use a fixed random
+subset of four samples with a balanced label distribution
+
+> Adding training samples does not significantly
+reduce 
+
+> Performant label orderings are not consistent
+across models
+
+---
+### [Addressing Order Sensitivity of In-Context Demonstration Examples in Causal Language Models](https://arxiv.org/pdf/2402.15637.pdf) (2024)
+
+> we found that
+causal language models (CausalLMs) are more
+sensitive to this order compared to prefix language models (PrefixLMs). We attribute this
+phenomenon to the auto-regressive attention
+masks within CausalLMs, which restrict each
+token from accessing information from subsequent tokens.
+
+> PrefixLMs (Tay et al.,
+2022; Raffel et al., 2019) employ full attention
+within the prefix tokens, allowing in-context samples all attend to each other. For given demonstrations (i.e., in-context examples), we evaluate
+model performance across all permutations of the
+in-context examples, and introduce a metric termed
+as ‘partial correct ratio’. This metric reflects the
+proportion of samples where the correct answer can
+be determined through majority voting, yet specific
+permutations lead to correct outcomes, whereas
+others result in incorrect ones. We find that PrefixLMs exhibit significantly lower sensitivity to
+order compared to CausalLMs, with only 0.8% of
+samples showing partial correctness for Flan-T5-
+XXL, as opposed to 30.9% for LLaMA on SST5 (Socher et al., 2013) dataset.
+
 <!-- ---
 ### []() ()
 

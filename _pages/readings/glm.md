@@ -156,10 +156,36 @@ sample.
 > TBC
 
 
-<!-- ---
-### []() ()
+---
+### [Towards Optimizing the Costs of LLM Usage](https://arxiv.org/pdf/2402.01742.pdf) (2024)
 
-> TBC-->
+> we propose optimizing the usage costs of LLMs
+by estimating their output quality (without actually invoking the
+LLMs), and then solving an optimization routine for the LLM selection to either keep costs under a budget, or minimize the costs, in
+a quality and latency aware manner.
+Additionally, we propose
+several deterministic heuristics for reducing tokens in a quality
+aware manner, and study the related optimization problem of applying the heuristics optimizing the quality and cost trade-off.
+
+> For instance, we have
+empirically observed that there is a significant difference in the
+summarization capabilities of GPT-3.5-Turbo and Text-Davinci on
+documents containing data in certain formats, such as tables versus lists. 
+
+> existing methods: 
+> - Model Selection and Cascade: sequentially querying for the next model in the cascade if the previous model’s performance was not satisfactory.
+Examples: cascade architecture, triage, API Selection
+> - Prompt Length Reduction: compress instruction, or demonstrations, or reduce their number.
+Examples: sentence compression, dynamic ICL, ICL pruning, LLMLingua
+> - Caching Based approaches: GPTCache
+
+
+> A key insight that we have empirically observed is that
+there might not be a clear hierarchy of the models in terms of their
+performance [13, 15]. In other words, the largest or most expensive
+or most popular model might or might not perform the best for
+a given task and context
+
 
 
 <!-- ---
