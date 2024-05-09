@@ -77,7 +77,8 @@ worse the prediction of the language model gets, when removing one of the top-k 
 > **Efficient retriever fine-tuning**: *Re-ranking.* A second strategy is to retrieve a larger number of documents L with the retriever, and to
 re-embed and rerank these documents with the up-to-date retriever, and pass the resulting top-K to the
 language model.
-*Query-side fine-tuning.* Finally, the last strategy is to decouple the encoding of the queries and documents.
+
+> *Query-side fine-tuning.* Finally, the last strategy is to decouple the encoding of the queries and documents.
 In this case, we fix the parameters corresponding to the document encoder, and only train the parameters
 corresponding to the query encoder. Thus, the embeddings of documents are fixed, and we do not need to
 refresh the index, and thus there is no computational overhead. As we will see in practice, the impact of
@@ -108,6 +109,7 @@ has been some research on in-context learning with retrieval-augmented decoder-o
 can be straightforwardly implemented by concatenating retrieved passages with the query as the
 input of the LM (Mallen et al., 2022; Shi et al., 2023; Khattab et al., 2022), in-context learning with
 retrieval-augmented encoder-decoder LMs, such as ATLAS, remains unexplored
+
 > TBC
 
 ---
