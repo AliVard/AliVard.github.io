@@ -238,11 +238,40 @@ by maximizing the cosine similarity between them
 > TBC
 
 
-<!-- ---
-### []() ()
+---
+### [PromptReps: Prompting Large Language Models to Generate Dense and Sparse Representations for Zero-Shot Document Retrieval](https://arxiv.org/pdf/2404.18424) (2024) [[Code]](https://github.com/ielab/PromptReps)
 
-> TBC-->
+> we propose PromptReps, which combines the advantages of both categories: no
+need for training and the ability to retrieve from
+the whole corpus. Our method only requires
+prompts to guide an LLM to generate query
+and document representations for effective document retrieval. Specifically, we prompt the
+LLMs to represent a given text using a single word, and then use the last token’s hidden
+states and the corresponding logits associated
+to the prediction of the next token to construct
+a hybrid document retrieval system. The retrieval system harnesses both dense text embedding and sparse bag-of-words representations
+given by the LLM.
 
+>  since there could be multiple words
+to represent the passage, there might be multiple tokens in the vocabulary that have a high probability
+of being sampled by the language model. Such a
+distribution over the vocabulary, which often refers
+to "logits", could potentially provide a good representation of the given passage. In addition, since
+the logits are computed by the last layer hidden
+state2 of the last input token (‘"’), which is a dense
+vector embedding, it can also serve as a dense representation of the passage.
+
+> *Sparsification*: We retain only the values corresponding to the obtained token IDs in the logits and
+set the rest of the dimensions to zero, thereby
+considering only tokens present in the documents.
+...
+we only keep
+tokens within the top 128 values if the logits.
+
+> For dense retrieval, we directly use the hidden
+states as the embedding of the documents. For indexing these embeddings, we simply normalize all
+the embeddings and add them into an Approximate
+Nearest search (ANN) vector index.
 
 <!-- ---
 ### []() ()
