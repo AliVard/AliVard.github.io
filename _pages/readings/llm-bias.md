@@ -90,6 +90,32 @@ prompt for evaluation by LLMs.
 
 
 ---
+### [Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting](https://arxiv.org/pdf/2306.17563) (NAACL 2024)
+
+by Google
+
+> We analyze pointwise and listwise ranking prompts used by existing methods and argue that off-the-shelf LLMs do not
+fully understand these challenging ranking formulations. In this paper, we propose to significantly reduce the burden on LLMs by using a new technique called Pairwise Ranking
+Prompting (PRP).
+
+> Since it is known that LLMs can be sensitive
+to text orders in the prompt (Lu et al., 2022; Liu
+et al., 2023a), for each pair of documents, we
+will inquire the LLM twice by swapping their order: u(q, d1, d2) and u(q, d2, d1). Such simple debiasing method is difficult for listwise methods due
+to their combinatorial nature.
+
+> We introduce a sliding window approach that is
+able to further bring down the computation complexity. One sliding window pass is similar to one
+pass in the Bubble Sort algorithm: Given an initial
+ranking, we start from the bottom of the list, compare and swap document pairs with a stride of 1
+on-the-fly based on LLM outputs. One pass only
+requires O(N) time complexity. See Figure 3 for
+an illustration.
+By noticing that ranking usually only cares about
+Top-K ranking metrics, we can perform K passes,
+where K is small
+
+---
 ### [Self-Preference Bias in LLM-as-a-Judge](https://arxiv.org/pdf/2410.21819) (29 Oct 2024)
 
 > Our findings reveal that LLMs assign significantly higher evaluations to outputs with lower perplexity than human evaluators, regardless of whether the outputs were self-generated. This suggests that the essence of the bias lies in perplexity and that the self-preference bias exists because LLMs prefer texts more familiar to them.
@@ -115,6 +141,28 @@ with an exact document index.
 
 > TBC
 
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
 <!-- ---
 ### []() ()
 
@@ -141,8 +189,3 @@ with an exact document index.
 ### []() ()
 
 > TBC-->
-
----
-### [Split and Merge: Aligning Position Biases in LLM-based Evaluators](https://aclanthology.org/2024.emnlp-main.621.pdf) (2024.emnlp-main)
-
-> TBC
