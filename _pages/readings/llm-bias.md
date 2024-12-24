@@ -76,6 +76,19 @@ most challenging instances to evaluate are characterized by: (1) frequent disagr
 judges, (2) closely matched win rates and minimal
 quality gaps among candidate models, and (3) significant position bias exhibited by the majority of
 judges. 
+
+
+---
+### [Split and Merge: Aligning Position Biases in LLM-based Evaluators](https://aclanthology.org/2024.emnlp-main.621.pdf) (2024.emnlp-main)
+
+> we propose PORTIA, an alignmentbased system designed to mimic human comparison strategies to calibrate position bias in a
+lightweight yet effective manner. Specifically,
+PORTIA splits the answers into multiple segments, taking into account both length and semantics, and merges them back into a single
+prompt for evaluation by LLMs.
+
+![split and merge](../../images/Screenshot 2024-12-24 at 11.54.53.png)
+
+
 ---
 ### [Self-Preference Bias in LLM-as-a-Judge](https://arxiv.org/pdf/2410.21819) (29 Oct 2024)
 
