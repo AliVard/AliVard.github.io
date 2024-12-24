@@ -8,7 +8,10 @@ redirect_from:
   - /readings.html
 ---
 
-## [Learning to Rank](ltr)
+## [LLM Bias](llm-bias)
+
+
+## [LLM for Recommendation](rec)
 
 
 ## [Retrieval Augmentation](rag)
@@ -17,13 +20,13 @@ redirect_from:
 ## [In-Context Learning](icl)
 
 
-## [Sentence Transformer](sber)
-
-
-## [LLM for Recommendation](rec)
-
-
 ## [General LLM](glm)
+
+
+## [Learning to Rank](ltr)
+
+
+## [Sentence Transformer](sber)
 
 
 ## [Other](other)

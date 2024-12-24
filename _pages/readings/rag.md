@@ -9,6 +9,32 @@ redirect_from:
 ---
 
 ---
+### [Inference Scaling for Long-Context Retrieval Augmented Generation](https://arxiv.org/pdf/2410.04343) (2024-10-05)
+
+*Google DeepMind*
+
+> we investigate inference scaling
+for retrieval augmented generation (RAG), exploring strategies beyond simply increasing the quantity of
+knowledge. We focus on two inference scaling strategies: in-context learning and iterative prompting.
+
+> increasing inference computation leads to nearly
+linear gains in RAG performance when optimally allocated, a relationship we describe as the inference
+scaling laws for RAG.
+
+> Inspired by iterative
+methods (Trivedi et al., 2023; Yoran et al., 2024), we develop iterative demonstration-based RAG
+(IterDRAG). IterDRAG learns to decompose input queries into simpler sub-queries and answer them
+using interleaved retrieval. By iteratively retrieving and generating upon sub-queries, LLMs construct
+reasoning chains that bridge the compositionality gap for multi-hop queries.
+
+> we measure computation by considering the total number of input tokens across all iterations,
+referred to as the effective context length.
+
+> We reverse the order of the
+retrieved documents, placing higher-ranked documents closer to the query [(Liu et al., 2024b)](https://arxiv.org/pdf/2401.10225)
+
+
+---
 ### [Memory-Augmented LLM Personalization with Short- and Long-Term Memory Coordination](https://arxiv.org/pdf/2309.11696.pdf) (2023)
 
 > TBC

@@ -32,7 +32,7 @@ In the final year of my PhD (i.e., 2023), I have worked on generative Large Lang
 
 ## Publications  
 ### Conferences
-- Gustavo Penha, Ali Vardasbi, Enrico Palumbo, Marco De Nadai, and Hugues Bouchard. [Bridging Search and Recommendation in Generative Retrieval: Does One Task Help the Other?](https://dl.acm.org/doi/abs/10.1145/3640457.3688123) RecSys 2024. [Spotify](https://research.atspotify.com/2024/10/bridging-search-and-recommendation-with-generative-retrieval/)
+- Gustavo Penha, Ali Vardasbi, Enrico Palumbo, Marco de Nadai, and Hugues Bouchard. [Bridging Search and Recommendation in Generative Retrieval: Does One Task Help the Other?](https://dl.acm.org/doi/abs/10.1145/3640457.3688123) RecSys 2024. [Spotify](https://research.atspotify.com/2024/10/bridging-search-and-recommendation-with-generative-retrieval/)
 - Ali Vardasbi, Maarten de Rijke, Fernando Diaz, and Mostafa Dehghani. [The Impact of Group Membership Bias on the Quality and Fairness of Exposure in Ranking.](https://arxiv.org/pdf/2308.02887.pdf) SIGIR 2024. [Codes](https://github.com/AliVard/groupbias)
 - Mehrdad Rostami, Ali Vardasbi, Mohammad Aliannejadi, and Mourad Oussalah. [Emotional Insights for Food Recommendations.](https://link.springer.com/chapter/10.1007/978-3-031-56060-6_16) ECIR 2024. 
 - Fatemeh Sarvi, Ali Vardasbi, Mohammad Aliannejadi, Sebastian Schelter, and Maarten de Rijke. [On the Impact of Outlier Bias on User Clicks.](https://arxiv.org/pdf/2305.00857.pdf) SIGIR 2023. [Codes](https://github.com/arezooSarvi/outlierbias/)
