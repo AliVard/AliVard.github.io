@@ -142,26 +142,75 @@ with an exact document index.
 > TBC
 
 
-<!-- ---
-### []() ()
+---
+### [Large Language Models Are Not Robust Multiple Choice Selectors](https://arxiv.org/pdf/2309.03882) (7 Sep 2023 - ICLR 2024 Spotlight)
 
-> TBC-->
+> Through extensive empirical analyses with 20 LLMs on three benchmarks, we pinpoint that this behavioral bias primarily stems from LLMs’ token
+bias, where the model a priori assigns more probabilistic mass to specific option
+ID tokens (e.g., A/B/C/D) when predicting answers from the option IDs. To mitigate selection bias, we propose a label-free, inference-time debiasing method,
+called PriDe, which separates the model’s prior bias for option IDs from the overall prediction distribution. PriDe first estimates the prior by permutating option
+contents on a small number of test samples, and then applies the estimated prior
+to debias the remaining samples. We demonstrate that it achieves interpretable
+and transferable debiasing with high computational efficiency. 
 
-<!-- ---
-### []() ()
+> we find that, contrary to the common view in previous work (Wang et al., 2023a; Pezeshkpour & Hruschka, 2023),
+selection bias arises less from LLMs’ position bias, where they are deemed to favor options presented at specific ordering positions (like first or last). In contrast, we pinpoint one more salient
+intrinsic cause of selection bias as the model’s token bias when predicting answers from the option
+IDs given the standard MCQ prompt, where the model a priori assigns more probabilistic mass to
+specific ID tokens (e.g., A/B/C/D).
 
-> TBC-->
+> Despite the notably reduced selection bias, we find that removing option IDs usually degrades model
+performance (except in a few cases under the 5-shot setting), see Table 3 and 4 in Appendix C. This
+performance degradation results from the way we leverage LLMs to answer MCQs without option
+IDs, i.e., calculating and comparing the likelihoods of options, which is referred to as the “cloze
+prompt” format in Robinson & Wingate (2022). Their study demonstrates that asking LLMs to
+predict option IDs forms a better MCQ prompt than the “cloze prompt”, which is consistent with
+our observation
+
+> selection bias is an inherent behavioral
+bias of LLMs that cannot be addressed by simple prompt engineering.
+
+> The core idea of our method PriDe is to obtain a debiased prediction distribution by separating the
+model’s prior bias for option IDs from the overall prediction distribution.
+
+> Since gpt-3.5-turbo does not return the output probability, we sample 100
+generated answers as an approximation to Pobserved
 
 
-<!-- ---
-### []() ()
 
-> TBC-->
+---
+### [Bias in Large Language Models: Origin, Evaluation, and Mitigation](https://arxiv.org/pdf/2411.10915) (16 Nov 2024)
 
-<!-- ---
-### []() ()
+> Prompting methods gain popularity since the general public has no access to the model’s internal structure due to business
+interest. Specifically, [Li et al. (2024a)](#steering-llms-towards-unbiased-responses-a-causality-guided-debiasing-framework-13-mar-2024) proposes causal prompting based on front-door adjustment
+(Pearl et al., 2016). The proposed method modifies prompts without access to the parameters and
+logits of LLMs. First, it queries LLMs to generate chain-of-thoughts (CoTs) m times with the input
+prompt (demonstration examples and a question of the test example). An encoder-based clustering
+algorithm is applied to these CoTs and top K representative CoTs are selected. Next, it retrieves
+the optimal demonstration examples for each representative. Finally, LLMs are queried T times to
+obtain T answers for each representative CoT, and the final answer is obtained by a weighted voting.
 
-> TBC-->
+
+---
+### [Steering LLMs Towards Unbiased Responses: A Causality-Guided Debiasing Framework](https://arxiv.org/pdf/2403.08743) (13 Mar 2024)
+
+> TBC
+
+---
+### [Debating with More Persuasive LLMs Leads to More Truthful Answers](https://arxiv.org/pdf/2402.06782) (9 Feb 2024)
+
+> we ask: can weaker models assess the correctness of stronger models? We
+investigate this question in an analogous setting,
+where stronger models (experts) possess the necessary information to answer questions and weaker
+models (non-experts) lack this information but are
+otherwise as capable. The method we evaluate is
+debate, where two LLM experts each argue for a
+different answer, and a non-expert selects the answer. On the QuALITY comprehension task, we
+find that debate consistently helps both non-expert
+models and humans answer questions, achieving
+76% and 88% accuracy respectively (naive baselines obtain 48% and 60%). Furthermore, optimising expert debaters for persuasiveness in an
+unsupervised manner improves non-expert ability to identify the truth in debates.
+![prompt](../../images/Screenshot 2024-12-27 at 14.06.49.png)
 
 <!-- ---
 ### []() ()
