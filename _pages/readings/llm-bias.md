@@ -8,7 +8,7 @@ redirect_from:
   - /readings/llm-bias.html
 ---
 
-# Table of Contents
+## Table of Contents
 
   - [Large Language Models are not Fair Evaluators (29 May 2023)](#large-language-models-are-not-fair-evaluators-29-may-2023)
   - [Judging the Judges: A Systematic Investigation of Position Bias in Pairwise Comparative Assessments by LLMs (31 Oct 2024)](#judging-the-judges-a-systematic-investigation-of-position-bias-in-pairwise-comparative-assessments-by-llms-31-oct-2024)
@@ -334,9 +334,36 @@ unsupervised manner improves non-expert ability to identify the truth in debates
 ### [Justice or Prejudice? Quantifying Biases in LLM-as-a-Judge](https://arxiv.org/pdf/2410.02736) (3 Oct 2024)
 
 [Website](https://llm-judge-bias.github.io/)
-> TBC
 
+> we identify 12 key potential biases and propose a new automated bias quantification framework—CALM—which
+systematically quantifies and analyzes each type of bias in LLM-as-a-Judge by using automated and principle-guided modification.
+![biases](../../images/Screenshot 2024-12-31 at 15.24.56.png)
 
+> We design this process using an attack-and-detect approach. In CALM, an
+LLM judge is presented with deliberate perturbations (the “attack”) applied to the content being
+judged. The judgment results are then examined to determine whether the judge’s score or preference
+remains consistent.
+
+> We develop g(·) as a principle-guided modification powered by LLMs, following the approach of
+constitutional AI (Bai et al., 2022). By applying multiple sets of guidelines (i.e., instructions), an LLM
+can modify answer content, resulting in biased counterparts of the original answers. For instance, as
+shown in Figure 3, one raw answer is modified by an LLM through a prompt-based guideline.
+
+> For example, despite its advanced
+capabilities (Zheng et al., 2023), GPT-4-Turbo exhibits inconsistency when judging emotional
+responses, whereas ChatGPT demonstrates more stable performance. This complexity suggests that
+identifying the best model is not straightforward; it depends on the specific bias involved, and even
+top-tier models may display unexpected weaknesses.
+
+> One possible explanation for this is that, in the fact-related dataset, the quality differences
+between answers are more evident, which means that the influence of bias is insufficient to completely
+offset this quality gap. In contrast, the alignment dataset typically has smaller quality differences
+between answers, making the choices of the judge model more vulnerable to bias.
+
+> Position bias increases with more answer candidates. Figure 6 demonstrates that all judge models
+are significantly impacted by position bias. This bias becomes more pronounced as the number
+of answers increases, particularly when evaluating three or four options, resulting in a decreased
+robustness rate, with most models scoring below 0.5.
 
 
 <!-- ---
