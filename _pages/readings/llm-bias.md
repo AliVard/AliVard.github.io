@@ -8,6 +8,51 @@ redirect_from:
   - /readings/llm-bias.html
 ---
 
+# Table of Contents
+
+  - [Large Language Models are not Fair Evaluators (29 May 2023)](#large-language-models-are-not-fair-evaluators-29-may-2023)
+  - [Judging the Judges: A Systematic Investigation of Position Bias in Pairwise Comparative Assessments by LLMs (31 Oct 2024)](#judging-the-judges-a-systematic-investigation-of-position-bias-in-pairwise-comparative-assessments-by-llms-31-oct-2024)
+  - [Split and Merge: Aligning Position Biases in LLM-based Evaluators (2024.emnlp-main)](#split-and-merge-aligning-position-biases-in-llm-based-evaluators-2024emnlp-main)
+  - [Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting (NAACL 2024)](#large-language-models-are-effective-text-rankers-with-pairwise-ranking-prompting-naacl-2024)
+  - [Self-Preference Bias in LLM-as-a-Judge (29 Oct 2024)](#self-preference-bias-in-llm-as-a-judge-29-oct-2024)
+  - [A Survey on LLM-as-a-Judge (23 Nov 2024)](#a-survey-on-llm-as-a-judge-23-nov-2024)
+  - [Can We Instruct LLMs to Compensate for Position Bias? (2024.findings-emnlp)](#can-we-instruct-llms-to-compensate-for-position-bias-2024findings-emnlp)
+  - [From Generation to Judgment: Opportunities and Challenges of LLM-as-a-judge (25 Nov 2024)](#from-generation-to-judgment-opportunities-and-challenges-of-llm-as-a-judge-25-nov-2024)
+  - [Large Language Models Sensitivity to The Order of Options in Multiple-Choice Questions (22 Aug 2023)](#large-language-models-sensitivity-to-the-order-of-options-in-multiple-choice-questions-22-aug-2023)
+  - [Large Language Models Are Not Robust Multiple Choice Selectors (7 Sep 2023 - ICLR 2024 Spotlight)](#large-language-models-are-not-robust-multiple-choice-selectors-7-sep-2023---iclr-2024-spotlight)
+  - [Bias in Large Language Models: Origin, Evaluation, and Mitigation (16 Nov 2024)](#bias-in-large-language-models-origin-evaluation-and-mitigation-16-nov-2024)
+  - [Steering LLMs Towards Unbiased Responses: A Causality-Guided Debiasing Framework (13 Mar 2024)](#steering-llms-towards-unbiased-responses-a-causality-guided-debiasing-framework-13-mar-2024)
+  - [Debating with More Persuasive LLMs Leads to More Truthful Answers (9 Feb 2024)](#debating-with-more-persuasive-llms-leads-to-more-truthful-answers-9-feb-2024)
+  - [Justice or Prejudice? Quantifying Biases in LLM-as-a-Judge (3 Oct 2024)](#justice-or-prejudice-quantifying-biases-in-llm-as-a-judge-3-oct-2024)
+
+---
+### [Large Language Models are not Fair Evaluators](https://arxiv.org/pdf/2305.17926) (29 May 2023)
+
+> e.g., Vicuna-13B could beat ChatGPT on
+66 over 80 tested queries with ChatGPT as an
+evaluator. To address this issue, we propose
+a calibration framework with three simple yet
+effective strategies: 1) Multiple Evidence Calibration, which requires the evaluator model to
+generate multiple evaluation evidence before
+assigning ratings; 2) Balanced Position Calibration, which aggregates results across various
+orders to determine the final score; 3) Humanin-the-Loop Calibration, which introduces a
+balanced position diversity entropy to measure
+the difficulty of each example and seeks human assistance when needed.
+
+> The degree of positional bias varies based on
+the difference in response quality. 
+...
+One potential reason is that there is
+a significant difference in the quality of responses
+between Alpaca models and Vicuna models, and
+positional bias is not strong enough to change the
+judgment in such a situation.
+...
+The conflict rate is negatively correlated with
+the score gap between the two responses.
+
+
+
 ---
 ### [Judging the Judges: A Systematic Investigation of Position Bias in Pairwise Comparative Assessments by LLMs](https://arxiv.org/pdf/2406.07791) (31 Oct 2024)
 
@@ -123,9 +168,62 @@ where K is small
 ---
 ### [A Survey on LLM-as-a-Judge](https://arxiv.org/pdf/2411.15594) (23 Nov 2024)
 
-> TBC
+> How can reliable LLM-as-a-Judge systems be built?
 
+> approaches like Self-Taught Evaluator [[124 ->](https://arxiv.org/pdf/2408.02666)] offer a promising alternative by
+eliminating the need for human annotations. This method leverages synthetic training data, starting
+with unlabeled instructions and generating contrasting outputs from models. These outputs are
+then used to train an LLM-as-a-Judge to produce reasoning traces and final judgments.
 
+>  Using LLM as the brain of agent, an agentic system [[167 ->](https://arxiv.org/pdf/2410.10934)] could evaluate like a human, it
+would reduce the need for human involvement and eliminate the trade-off between thoroughness
+and effort.
+
+> Current methods for refining evaluation tasks mainly including the decomposition of evaluation
+steps and criteria: **(a) Decomposition of Evaluation Steps** entails breaking down the entire
+evaluation tasks into smaller steps, ... For
+instance, G-Eval[68] and DHP[129] use Chain-of-Thought(CoT) ...
+SocREval[31] employs the Socratic method to meticulously design each step to enhance evaluation
+performance. Saha et al. proposes Branch-Solve-Merge(BSM)[92], which divides evaluation tasks
+into multiple parallel sub-tasks for separate evaluation and final merge. 
+**(b) Decomposition of
+Evaluation Criteria** involves breaking down coarse evaluation criteria like Fluency into finergrained sub-criteria like Grammar, Engagingness and Readability, and then generating overall scores
+based on these difference dimensions. HD-Eval[69] iteratively aligns LLM evaluators with human
+preference via hierarchical criteria decomposition and thereby addressing the potential bias in LLMs.
+Hu and Gao et al.[32] summarize and clearly define an explicit hierarchical classification system
+encompassing 11 criteria, addressing the issue of LLMs potentially confusing different evaluation
+standards. 
+
+> to address specific biases like position bias which is common
+in pairwise evaluations, several research efforts have optimized prompts design by randomly
+swapping contents to be evaluated. Wang et al.[[122](#large-language-models-are-not-fair-evaluators-29-may-2023)] analyzed and validated the impact of position
+bias on LLM-as-a-judge, and proposed a calibration framework to mitigate this bias by swapping
+the contents and averaging the scores. Auto-J[55] and JudgeLM[163] also enhance the evaluation
+consistency by shuffling the texts to be evaluated. In contrast to averaging scores, PandaLM[128]
+annotates the conflicting evaluation results after swapping as "Tie" to address the position bias.
+
+>  the
+work of Sottana et al.[103] reduces randomness in evaluations by averaging multiple scores of
+the same sample. Similarly, PsychoBench[34] takes the mean and standard deviation from ten
+independent runs. Auto-J[55] further amplifies the differences between evaluation rounds, which
+combine critiques with and without scenario criteria to obtain the final results.
+
+> [[97](#judging-the-judges-a-systematic-investigation-of-position-bias-in-pairwise-comparative-assessments-by-llms-31-oct-2024)] proposed two metrics: Position
+Consistency, which quantifies how frequently a judge model selects the same response after
+changing their positions, and Preference Fairness, which measures the extent to which judge
+models favor response in certain positions.
+
+> The study [[122](#large-language-models-are-not-fair-evaluators-29-may-2023)] also introduced a metric Conflict
+Rate to measure the percent of disagreement after change the position of two candidate responses.
+Their analytical experiments reveal that the degree of positional bias fluctuates depending on the
+disparity in response quality and the preferred position varies with different LLMs. For instance,
+GPT-4 tends to favor the first position, while ChatGPT shows a preference for the second position.
+
+> **Length Bias** refers to the tendency to favor responses of a particular length, such as a preference
+for more verbose responses which is also known as verbosity bias [33, 85, [138](#justice-or-prejudice-quantifying-biases-in-llm-as-a-judge-3-oct-2024), 158]
+
+> **Self-Enhancement Bias** describe the phenomenon that LLM evaluators may prefer response
+generated by themselves [[138](#justice-or-prejudice-quantifying-biases-in-llm-as-a-judge-3-oct-2024), 158].
 ---
 ### [Can We Instruct LLMs to Compensate for Position Bias?](https://aclanthology.org/2024.findings-emnlp.732.pdf) (2024.findings-emnlp)
 
@@ -143,6 +241,26 @@ with an exact document index.
 
 
 ---
+### [Large Language Models Sensitivity to The Order of Options in Multiple-Choice Questions](https://arxiv.org/pdf/2308.11483) (22 Aug 2023)
+
+> we
+demonstrate a considerable performance gap
+of approximately 13% to 75% in LLMs on different benchmarks, when answer options are
+reordered, even when using demonstrations in
+a few-shot setting. 
+we conjecture that this sensitivity arises when
+LLMs are uncertain about the prediction between the top-2/3 choices, and specific options
+placements may favor certain prediction between those top choices depending on the question caused by positional bias. We also identify patterns in top-2 choices that amplify or
+mitigate the model’s bias toward option placement. We found that for amplifying bias, the
+optimal strategy involves positioning the top
+two choices as the first and last options. Conversely, to mitigate bias, we recommend placing these choices among the adjacent options.
+
+> (1) The sensitivity
+gap consistently remains substantial even with the addition of more demonstrations in the few-shot setting. (2) As
+performances improve, the sensitivity gap shrinks. (3) Adding more demonstrations does not necessarily result in a
+reduction of the sensitivity gap.
+
+---
 ### [Large Language Models Are Not Robust Multiple Choice Selectors](https://arxiv.org/pdf/2309.03882) (7 Sep 2023 - ICLR 2024 Spotlight)
 
 > Through extensive empirical analyses with 20 LLMs on three benchmarks, we pinpoint that this behavioral bias primarily stems from LLMs’ token
@@ -153,7 +271,7 @@ contents on a small number of test samples, and then applies the estimated prior
 to debias the remaining samples. We demonstrate that it achieves interpretable
 and transferable debiasing with high computational efficiency. 
 
-> we find that, contrary to the common view in previous work (Wang et al., 2023a; Pezeshkpour & Hruschka, 2023),
+> we find that, contrary to the common view in previous work ([Wang et al., 2023a](#large-language-models-are-not-fair-evaluators-29-may-2023); [Pezeshkpour & Hruschka, 2023](#large-language-models-sensitivity-to-the-order-of-options-in-multiple-choice-questions-22-aug-2023)),
 selection bias arises less from LLMs’ position bias, where they are deemed to favor options presented at specific ordering positions (like first or last). In contrast, we pinpoint one more salient
 intrinsic cause of selection bias as the model’s token bias when predicting answers from the option
 IDs given the standard MCQ prompt, where the model a priori assigns more probabilistic mass to
@@ -163,7 +281,7 @@ specific ID tokens (e.g., A/B/C/D).
 performance (except in a few cases under the 5-shot setting), see Table 3 and 4 in Appendix C. This
 performance degradation results from the way we leverage LLMs to answer MCQs without option
 IDs, i.e., calculating and comparing the likelihoods of options, which is referred to as the “cloze
-prompt” format in Robinson & Wingate (2022). Their study demonstrates that asking LLMs to
+prompt” format in Robinson & Wingate (2022) [->](https://arxiv.org/pdf/2210.12353). Their study demonstrates that asking LLMs to
 predict option IDs forms a better MCQ prompt than the “cloze prompt”, which is consistent with
 our observation
 
@@ -212,11 +330,51 @@ models and humans answer questions, achieving
 unsupervised manner improves non-expert ability to identify the truth in debates.
 ![prompt](../../images/Screenshot 2024-12-27 at 14.06.49.png)
 
+---
+### [Justice or Prejudice? Quantifying Biases in LLM-as-a-Judge](https://arxiv.org/pdf/2410.02736) (3 Oct 2024)
+
+[Website](https://llm-judge-bias.github.io/)
+> TBC
+
+
+
+
 <!-- ---
 ### []() ()
 
 > TBC-->
 
+<!-- ---
+### []() ()
+
+> TBC-->
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+<!-- ---
+### []() ()
+
+> TBC-->
+
+
+<!-- ---
+### []() ()
+
+> TBC-->
 
 <!-- ---
 ### []() ()
