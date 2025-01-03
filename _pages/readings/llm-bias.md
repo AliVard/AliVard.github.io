@@ -202,8 +202,7 @@ instance, G-Eval[68] and DHP[129] use Chain-of-Thought(CoT) ...
 SocREval[31] employs the Socratic method to meticulously design each step to enhance evaluation
 performance. Saha et al. proposes Branch-Solve-Merge(BSM)[92], which divides evaluation tasks
 into multiple parallel sub-tasks for separate evaluation and final merge. 
-**(b) Decomposition of
-Evaluation Criteria** involves breaking down coarse evaluation criteria like Fluency into finergrained sub-criteria like Grammar, Engagingness and Readability, and then generating overall scores
+**(b) Decomposition of Evaluation Criteria** involves breaking down coarse evaluation criteria like Fluency into finergrained sub-criteria like Grammar, Engagingness and Readability, and then generating overall scores
 based on these difference dimensions. HD-Eval[69] iteratively aligns LLM evaluators with human
 preference via hierarchical criteria decomposition and thereby addressing the potential bias in LLMs.
 Hu and Gao et al.[32] summarize and clearly define an explicit hierarchical classification system
@@ -438,7 +437,7 @@ robustness rate, with most models scoring below 0.5.
 ---
 ### [Starling-7B: Improving Helpfulness and Harmlessness with RLAIF](https://openreview.net/pdf/40b25a86c4364d2b54ef5c7bc0d6765f5201b5e2.pdf) (COLM 2024)
 
-> **A.2 Positional Bias Mitigation: ** 
+> **A.2 Positional Bias Mitigation:** 
 Specifically, the four strategies are as follows:
 No Pairwise Evaluation : The prompt does not ask for any pairwise evaluation strategy.
 Pairwise Evaluation : The prompt asks the ranker to first evaluate each possible pairing,
