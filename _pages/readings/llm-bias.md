@@ -8,6 +8,7 @@ redirect_from:
   - /readings/llm-bias.html
 ---
 
+
 ## Table of Contents
 
   - [Large Language Models are not Fair Evaluators (29 May 2023)](#large-language-models-are-not-fair-evaluators-29-may-2023)
@@ -24,6 +25,13 @@ redirect_from:
   - [Steering LLMs Towards Unbiased Responses: A Causality-Guided Debiasing Framework (13 Mar 2024)](#steering-llms-towards-unbiased-responses-a-causality-guided-debiasing-framework-13-mar-2024)
   - [Debating with More Persuasive LLMs Leads to More Truthful Answers (9 Feb 2024)](#debating-with-more-persuasive-llms-leads-to-more-truthful-answers-9-feb-2024)
   - [Justice or Prejudice? Quantifying Biases in LLM-as-a-Judge (3 Oct 2024)](#justice-or-prejudice-quantifying-biases-in-llm-as-a-judge-3-oct-2024)
+  - [Starling-7B: Improving Helpfulness and Harmlessness with RLAIF (COLM 2024)](#starling-7b-improving-helpfulness-and-harmlessness-with-rlaif-colm-2024)
+  - [Found in the Middle: Permutation Self-Consistency Improves Listwise Ranking in Large Language Models (2024.naacl-long)](#found-in-the-middle-permutation-self-consistency-improves-listwise-ranking-in-large-language-models-2024naacl-long)
+  - [Lost in the Middle: How Language Models Use Long Contexts (6 Jul 2023 )](#lost-in-the-middle-how-language-models-use-long-contexts-6-jul-2023)
+  - [On Context Utilization in Summarization with Large Language Models (6 Oct 2023 - ACL 2024)](#on-context-utilization-in-summarization-with-large-language-models-6-oct-2023---acl-2024)
+  - [Eliminating Position Bias of Language Models: A Mechanistic Approach (1 Jul 2024)](#eliminating-position-bias-of-language-models-a-mechanistic-approach-1-jul-2024)
+  - [CalibraEval: Calibrating Prediction Distribution to Mitigate Selection Bias in LLMs-as-Judges (20 Oct 2024)](#calibraeval-calibrating-prediction-distribution-to-mitigate-selection-bias-in-llms-as-judges-20-oct-2024)
+
 
 ---
 ### [Large Language Models are not Fair Evaluators](https://arxiv.org/pdf/2305.17926) (29 May 2023)
@@ -470,6 +478,31 @@ prove the robustness of our method, showing
 convergence to the true ranking under random
 perturbations. 
 
+>  We find inspiration in the self-consistency framework (Wang et al., 2023b [->](https://arxiv.org/abs/2203.11171)), which
+improves quality and consistency in chain-ofthought prompting (Wei et al., 2022). The approach
+has two main stages: first, it samples multiple answers for an input prompt; then, it aggregates the
+sampled answers into a single, high-quality one,
+hence “marginalizing out” separate reasoning paths
+from the language model
+
+>  we compute the
+central ranking closest in Kendall tau distance to all
+the sampled rankings, which, like self-consistency,
+marginalizes out the independent variable (in the
+original, reasoning paths; in ours, prompt order)
+
+> We apply
+permutation self-consistency with m = 20 output
+rankings, resulting in 20 parallel calls to the LLM
+per example.
+
+> We conclude
+that picking m = 20 output rankings is effective,
+though returns sharply diminish after 5–10.
+
+> In conclusion, this evidence
+grounds our choice of not using temperature.
+
 ---
 ### [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/pdf/2307.03172) (6 Jul 2023 )
 
@@ -486,21 +519,81 @@ even for explicitly long-context models.
 ![middle](../../images/Screenshot 2025-01-02 at 15.46.11.png)
 
 
-<!-- ---
-### []() ()
+---
+### [On Context Utilization in Summarization with Large Language Models](https://arxiv.org/pdf/2310.10570) (6 Oct 2023 - ACL 2024)
 
-> TBC-->
+> we conduct the first
+comprehensive study on context utilization and
+position bias in summarization.
+...
+We introduce a new evaluation
+benchmark called MiddleSum on the which we
+benchmark two alternative inference methods
+to alleviate position bias: hierarchical summarization and incremental summarization
 
-<!-- ---
-### []() ()
+LLMs can focus on the beginning and/or the end
+of their input, but largely ignore the middle. The
+U-shape or middle curse from [Liu et al. (2023a)](#lost-in-the-middle-how-language-models-use-long-contexts-6-jul-2023-)
+also applies to abstractive summarization.
 
-> TBC-->
 
-<!-- ---
-### []() ()
+> let us divide an input x of length n into
+k consecutive blocks of size at most m.
+Hierarchical summarization consists in summarizing each block and then summarizing the concatenation of summaries.
+Incremental summarization consists in updating
+a summary of the text so far with content from the
+current text block.
+We
+also compare to a baseline consisting in adding the
+prompt Please also pay attention to
+the middle section of the input
+when constructing the summary,
+which we refer to as the Focus prompt.
 
-> TBC-->
+> Both alternative methods show promising results on open-source LLMs, notably on Mistral-7B
+for which they improve performance significantly.
+However, they are not successful and lag behind Focus Prompt with GPT-3.5. Across domains (see
+Table 8), hierarchical and incremental inference
+are very effective on scientific publications, which
+we hypothesize is due to the natural division in
+structured sections of such inputs. Yet, they seem
+to harm summaries on the other domains.
 
+
+---
+### [Eliminating Position Bias of Language Models: A Mechanistic Approach](https://arxiv.org/pdf/2407.01100) (1 Jul 2024)
+
+> Our mechanistic analysis attributes the position bias to two components employed in nearly all state-of-the-art LMs: causal attention and relative positional encodings. Based on the analyses, we propose to eliminate position bias (e.g., different retrieved documents' orders in QA affect performance) with a training-free zero-shot approach. Our method changes the causal attention to bidirectional attention between documents and utilizes model attention values to decide the relative orders of documents instead of using the order provided in input prompts, therefore enabling Position-INvariant inferencE (PINE) at the document level.
+
+
+---
+### [CalibraEval: Calibrating Prediction Distribution to Mitigate Selection Bias in LLMs-as-Judges](https://arxiv.org/pdf/2410.15393) (20 Oct 2024)
+
+> CalibraEval reformulates debiasing as an
+optimization task aimed at adjusting observed prediction distributions to align with unbiased prediction distributions. To solve
+this optimization problem, we propose a non-parametric orderpreserving algorithm (NOA). This algorithm leverages the partial
+order relationships between model prediction distributions, thereby
+eliminating the need for explicit labels and precise mathematical
+function modeling. 
+![swap](../../images/Screenshot 2025-01-02 at 23.54.52.png)
+
+> ![calibration](../../images/Screenshot 2025-01-02 at 23.57.21.png)
+> ![optimization](../../images/Screenshot 2025-01-02 at 23.55.44.png)
+
+> When applied to lower-capability LLMs, such as Llama-3-8B
+and Qwen-14B, [Pride](#large-language-models-are-not-robust-multiple-choice-selectors-7-sep-2023---iclr-2024-spotlight) effectively estimates bias and improves
+consistency. However, its effectiveness diminishes with more advanced models (e.g., GPT4o). This limitation may arise from
+the simplified probabilistic relationships employed in Pride.
+CalibraEval consistently improves performance across various
+LLMs and tasks. On average, CalibraEval shows enhancements
+over all the baselines.
+
+> We found that increasing the size of
+the estimation set can better enhance consistency. Additionally, a
+smaller estimation set can also effectively support CalibraEval in
+reducing bias. For ChatGPT, using only 10% of the data resulted
+in improvements of over 85% compared to the full dataset. Overall, even with limited data, CalibraEval can still produce reliable
+calibration functions.
 
 <!-- ---
 ### []() ()

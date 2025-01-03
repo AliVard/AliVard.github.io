@@ -8,7 +8,7 @@ def generate_toc(markdown_file):
     with open(markdown_file, 'r') as file:
         lines = file.readlines()
 
-    toc = ['# Table of Contents', '']
+    toc = ['', '## Table of Contents', '']
     commented = False
     for line in lines:
         if line.startswith("<!--"):
@@ -34,6 +34,7 @@ def generate_toc(markdown_file):
 
 
     print('\n'.join(toc))
+    print('\n')
 
 
 generate_toc(sys.argv[1])
